@@ -7,27 +7,25 @@ import './styles/App.scss';
 
 const App = () => {
   return (
-    <>
+    <Router>
       <Container flex>
         <SideBar />
 
         <Container flex column>
           <Header />
 
-          <Router>
-            <Routes>
-              {ApplicationRoutes.map(({ path, element }, idx) => (
-                <Route key={idx} path={path} element={element} />
-              ))}
-            </Routes>
-          </Router>
+          <Routes>
+            {ApplicationRoutes.map(({ path, element }, idx) => (
+              <Route key={idx} path={path} element={element} />
+            ))}
+          </Routes>
         </Container>
       </Container>
 
       <Container flex>
         <AudioPlayer />
       </Container>
-    </>
+    </Router>
   );
 };
 

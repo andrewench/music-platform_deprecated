@@ -23,7 +23,8 @@
       "@pages": ["./pages"],
       "@routes": ["./routes"],
       "@types": ["./types"],
-      "@views": ["./views"]
+      "@views": ["./views"],
+      "@data": ["./data"]
     }
   },
   "include": ["client"],

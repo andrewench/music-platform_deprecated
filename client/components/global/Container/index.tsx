@@ -1,6 +1,10 @@
 import React, { FC, ReactNode } from 'react';
 import classNames from 'classnames';
-import { FlexAlignOnMainAxis, FlexAlignOnCrossAxis } from '@types';
+import {
+  FlexAlignOnMainAxis,
+  FlexAlignOnCrossAxis,
+  ContainerGap,
+} from '@types';
 import styles from './Container.module.scss';
 
 interface IContainer {
@@ -10,6 +14,7 @@ interface IContainer {
   grid?: boolean;
   align?: FlexAlignOnMainAxis;
   content?: FlexAlignOnCrossAxis;
+  gap?: ContainerGap;
   className?: string;
   children: ReactNode;
 }
@@ -21,6 +26,7 @@ export const Container: FC<IContainer> = ({
   grid,
   align,
   content,
+  gap,
   className,
   children,
 }) => {
@@ -41,6 +47,10 @@ export const Container: FC<IContainer> = ({
         [styles.contentBetween]: content === FlexAlignOnCrossAxis.BETWEEN,
         [styles.contentAround]: content === FlexAlignOnCrossAxis.AROUND,
         [styles.contentEvenly]: content === FlexAlignOnCrossAxis.EVENLY,
+        'gap-5': gap === ContainerGap.EXTRASMALL,
+        'gap-10': gap === ContainerGap.SMALL,
+        'gap-15': gap === ContainerGap.MEDIUM,
+        'gap-20': gap === ContainerGap.LARGE,
       })}
     >
       {children}

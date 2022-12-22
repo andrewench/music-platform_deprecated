@@ -1,0 +1,9 @@
+@import '../../../styles/_variables';
+
+.box {
+  min-width: 300px;
+  width: 300px;
+  height: $SIDEBAR_HEIGHT;
+  border-right: 1px solid $SIDEBAR_BD;
+  background-color: $SIDEBAR_BG;
+}

@@ -1,0 +1,50 @@
+@use 'sass:list';
+@use 'sass:string';
+
+.flexContainer {
+  width: 100%;
+  display: flex;
+}
+
+.flexCol {
+  flex-direction: column;
+}
+
+.flexFullCenter {
+  align-items: center;
+  justify-content: center;
+}
+
+.grid {
+  flex-wrap: wrap;
+}
+
+$mainAxisValues: 'start', 'center', 'end', 'stretch';
+$crossAxisValues: 'start', 'center', 'end', 'space-between', 'space-around', 'space-evenly';
+$crossAxisKeys: 'start', 'center', 'end', 'between', 'around', 'evenly';
+
+$mainAxisClassPrefix: 'align';
+$crossAxisClassPrefix: 'content';
+
+@mixin generateClass($classPrefix, $prefixValue, $prop, $value) {
+  $prefixValueFirstIndex: string.slice($prefixValue, 1, 1);
+  $uppercaseFirstIndex: string.to-upper-case($prefixValueFirstIndex);
+  $lastIndexes: string.slice($prefixValue, 2);
+
+  $className: #{$classPrefix}#{$uppercaseFirstIndex}#{$lastIndexes};
+
+  .#{$className} {
+    #{$prop}: #{$value};
+  }
+}
+
+@each $row in $mainAxisValues {
+  @include generateClass($mainAxisClassPrefix, $row, 'align-items', $row);
+}
+
+@each $column in $crossAxisKeys {
+  $i: index($crossAxisKeys, $column);
+  $listElement: list.nth($crossAxisValues, $i);
+
+  @include generateClass($crossAxisClassPrefix, $column, 'justify-content', $listElement);
+}

@@ -2,7 +2,12 @@
 
 .box {
   width: 100%;
+<<<<<<< HEAD
   height: 80px;
+=======
+  min-height: $HEADER_HEIGHT;
+  height: $HEADER_HEIGHT;
+>>>>>>> layout/header
   padding: 0 25px;
   box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.08);
   background-color: $HEADER_BG;

@@ -1,9 +1,72 @@
 @import '../../../styles/_variables';
 
 .box {
-  min-width: 300px;
-  width: 300px;
+  min-width: $SIDEBAR_WIDTH;
+  width: $SIDEBAR_WIDTH;
   height: $SIDEBAR_HEIGHT;
-  border-right: 1px solid $SIDEBAR_BD;
+  overflow: hidden;
+  box-shadow: 0 0 1px $SIDEBAR_BD;
   background-color: $SIDEBAR_BG;
+}
+
+.scrollBox {
+  max-height: calc(100vh - #{$AUDIO_PLAYER_HEIGHT});
+}
+
+.avatarBox {
+  position: fixed;
+  width: $SIDEBAR_WIDTH;
+  min-height: $AVATAR_BOX_HEIGHT;
+  height: $AVATAR_BOX_HEIGHT;
+  overflow: hidden;
+
+  & > img {
+    width: 100%;
+    border-radius: 0 0 14px 80px;
+  }
+}
+
+.paddingContainer {
+  position: relative;
+  margin-top: #{$AVATAR_BOX_HEIGHT};
+  width: 100%;
+  height: calc(100vh - #{$AVATAR_BOX_HEIGHT} - #{$AUDIO_PLAYER_HEIGHT});
+  padding: 0 20px 30px 20px;
+  border-radius: 10px 10px 0 0;
+  transition: .3s margin-top, .9s box-shadow;
+  background-color: #fff;
+
+  &:hover {
+    margin-top: 140px;
+    height: calc(100vh - #{$AVATAR_BOX_HEIGHT});
+    box-shadow: 0 -100px 100px #ffffff30;
+  }
+}
+
+.username {
+  transform: translateY(-22px);
+  height: 42px;
+  padding: 12px 30px;
+  border-radius: 21px;
+  box-shadow: 0px 10px 30px #00000010;
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: $BOLD_TEXT;
+  background-color: #fff;
+}
+
+.id {
+  padding-left: 20px;
+  font-weight: 300;
+  color: $LIGHT_TEXT;
+}
+
+.lastOnline {
+  font-size: 0.875rem;
+  color: $LIGHT_TEXT;
+}
+
+.menu {
+  margin-top: 20px;
+  width: 100%;
 }

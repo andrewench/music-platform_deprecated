@@ -1,0 +1,31 @@
+@import '../../../styles/variables';
+
+.item {
+  width: 100%;
+}
+
+.link {
+  position: relative;
+  display: flex;
+  padding: 16px;
+  text-decoration: none;
+  transition: .2s background-color;
+  border-radius: 4px;
+  color: $BOLD_TEXT;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(217, 217, 217, 0.3) 0%, rgba(217, 217, 217, 0) 100%);
+  }
+
+  &:hover {
+    color: #fff;
+    background-color: $ACCENT_COLOR;
+  }
+}

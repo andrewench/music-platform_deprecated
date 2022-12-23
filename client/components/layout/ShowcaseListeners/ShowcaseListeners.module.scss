@@ -1,0 +1,19 @@
+@import '../../../styles/variables';
+
+.box {
+  padding-left: 40px;
+  min-width: $SIDEBAR_WIDTH;
+  width: $SIDEBAR_WIDTH;
+}
+
+.label {
+  margin: 14px 0 10px 0;
+  font-size: 0.875rem;
+  color: $BOLD_TEXT;
+}
+
+.avatar {
+  outline: 2px solid #fff;
+  border-radius: 50%;
+  margin-left: -4px;
+}

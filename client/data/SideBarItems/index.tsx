@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import {
   IoPersonOutline,
   IoChatbubblesOutline,
@@ -11,7 +11,7 @@ import {
 interface ISideBarItems {
   to: string;
   label: string;
-  icon: unknown;
+  icon: ReactNode;
 }
 
 export const SideBarItems: ISideBarItems[] = [

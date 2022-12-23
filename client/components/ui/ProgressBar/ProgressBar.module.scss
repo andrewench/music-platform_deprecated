@@ -1,0 +1,22 @@
+@import '../../../styles/variables';
+
+.box {
+  position: relative;
+  height: 4px;
+}
+
+.track {
+  width: 100%;
+  height: 100%;
+  border-radius: 2px;
+  background-color: $PROGRESSBAR_BG;
+}
+
+.drag {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  border-radius: 2px;
+  background-color: $ACCENT_COLOR;
+}

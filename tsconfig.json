@@ -24,7 +24,8 @@
       "@routes": ["./routes"],
       "@types": ["./types"],
       "@views": ["./views"],
-      "@data": ["./data"]
+      "@data": ["./data"],
+      "@utils": ["./utils"]
     }
   },
   "include": ["client"],

@@ -1,0 +1,16 @@
+@import '../../../styles/variables';
+
+.box {
+  padding-right: 40px;
+  min-width: $SIDEBAR_WIDTH;
+  width: $SIDEBAR_WIDTH;
+}
+
+.icon {
+  color: $BOLD_TEXT;
+
+  & path {
+    stroke-width: 24px;
+  }
+  
+}

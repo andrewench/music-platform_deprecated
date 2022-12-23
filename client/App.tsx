@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ApplicationRoutes } from '@routes';
 import { Container } from '@components/global';
-import { SideBar, Header, AudioPlayer } from '@components/layout';
+import { SideBar, Header, Footer } from '@components/layout';
 import './styles/App.scss';
 
 const App = () => {
@@ -23,7 +23,7 @@ const App = () => {
       </Container>
 
       <Container flex>
-        <AudioPlayer />
+        <Footer />
       </Container>
     </Router>
   );

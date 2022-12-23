@@ -1,0 +1,10 @@
+@import '../../../styles/variables';
+
+.box {
+  width: 100vw;
+  min-height: $AUDIO_PLAYER_HEIGHT;
+  height: $AUDIO_PLAYER_HEIGHT;
+  z-index: 9000;
+  box-shadow: 0px 0px 1px #00000070;
+  background-color: $AUDIO_PLAYER_BG;
+}

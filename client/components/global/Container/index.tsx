@@ -51,6 +51,8 @@ export const Container: FC<IContainer> = ({
         'gap-10': gap === ContainerGap.SMALL,
         'gap-15': gap === ContainerGap.MEDIUM,
         'gap-20': gap === ContainerGap.LARGE,
+        'gap-25': gap === ContainerGap.LARGE_XLARGE,
+        'gap-30': gap === ContainerGap.MEDIUM_LARGE,
       })}
     >
       {children}

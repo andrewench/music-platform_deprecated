@@ -1,0 +1,38 @@
+@import '../../../styles/variables';
+
+$PLAYLIST_SIZE: 180px;
+$COVER_RADIUS: 14px;
+
+.box {
+  position: relative;
+  width: $PLAYLIST_SIZE;
+  border-radius: $COVER_RADIUS;
+}
+
+.cover {
+  width: $PLAYLIST_SIZE;
+  height: $PLAYLIST_SIZE;
+}
+
+.image {
+  border-radius: $COVER_RADIUS;
+}
+
+.newLabel {
+  $PADDING_X: 12px;
+
+  position: absolute;
+  top: -10px;
+  left: -#{$PADDING_X};
+  padding: 4px #{$PADDING_X};
+  border-radius: #{$PADDING_X};
+  font-size: 0.875rem;
+  color: #fff;
+  background-color: $RED_COLOR;
+}
+
+.title {
+  margin-top: 10px;
+  text-align: center;
+  color: $BOLD_TEXT;
+}

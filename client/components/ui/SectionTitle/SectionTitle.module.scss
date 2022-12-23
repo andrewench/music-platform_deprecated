@@ -1,0 +1,36 @@
+@import '../../../styles/variables';
+
+.section {
+  margin-bottom: 40px;
+}
+
+.label {
+  font-size: 1.25rem;
+  white-space: nowrap;
+  color: $BOLD_TEXT;
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+}
+
+.link {
+  white-space: nowrap;
+  text-decoration: none;
+  font-size: 0.875rem;
+  transition: .3s color;
+  color: $LIGHT_TEXT;
+
+  & svg {
+    transition: .3s transform;
+  }
+
+  &:hover {
+    color: $ACCENT_COLOR;
+
+    & svg {
+      transform: translateX(5px);
+    }
+  }
+}

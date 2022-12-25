@@ -10,15 +10,17 @@ export const Header = () => {
   const location = useLocation();
 
   return (
-    <Container flex align={FlexAlignOnMainAxis.CENTER} className={styles.box}>
-      {HeaderLinks.map(({ to, label }, idx) => (
-        <HeaderLink
-          active={location.pathname === to}
-          to={to}
-          label={label}
-          key={idx}
-        />
-      ))}
-    </Container>
+    <header>
+      <Container flex align={FlexAlignOnMainAxis.CENTER} className={styles.box}>
+        {HeaderLinks.map(({ to, label }, idx) => (
+          <HeaderLink
+            active={location.pathname === to}
+            to={to}
+            label={label}
+            key={idx}
+          />
+        ))}
+      </Container>
+    </header>
   );
 };

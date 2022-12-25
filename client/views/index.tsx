@@ -1,1 +1,10 @@
 export { Playlists } from './Playlists';
+export { Podcasts } from './Podcasts';
+export { Artists } from './Artists';
+export { Albums } from './Albums';
+export { Account } from './Account';
+export { Messenger } from './Messenger';
+export { Friends } from './Friends';
+export { Subscriptions } from './Subscriptions';
+export { LikedSongs } from './LikedSongs';
+export { Settings } from './Settings';

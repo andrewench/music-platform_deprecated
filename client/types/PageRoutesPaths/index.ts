@@ -1,1 +1,1 @@
-export type PageRoutesPaths = '/app' | '/login' | '/*';
+export type PageRoutesPaths = '/app' | '/signin' | '/*';

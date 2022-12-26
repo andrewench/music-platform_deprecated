@@ -64,20 +64,21 @@
     ],
 
     "@typescript-eslint/comma-dangle": "off",
-        "@typescript-eslint/semi": "off",
-        "@typescript-eslint/explicit-function-return-type": "off",
-        "@typescript-eslint/no-unused-vars": "warn",
-        "@typescript-eslint/member-delimiter-style": "off",
-        "@typescript-eslint/no-misused-promises": ["error", {
-            "checksVoidReturn": false
-          }
-        ],
-        "@typescript-eslint/triple-slash-reference": ["warn", {
-          "lib": "always",
-          "path": "always",
-          "types": "always"
-          }
-        ]
+    "@typescript-eslint/semi": "off",
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/no-unused-vars": "warn",
+    "@typescript-eslint/member-delimiter-style": "off",
+    "@typescript-eslint/strict-boolean-expressions": "off",
+    "@typescript-eslint/no-misused-promises": ["error", {
+        "checksVoidReturn": false
+      }
+    ],
+    "@typescript-eslint/triple-slash-reference": ["warn", {
+      "lib": "always",
+      "path": "always",
+      "types": "always"
+      }
+    ]
   },
   "settings": {
     "import/resolver": {

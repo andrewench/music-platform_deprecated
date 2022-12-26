@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react';
-import { Login, Application } from '@pages';
+import { SignIn, Application } from '@pages';
 import { PageRoutesPaths } from '@types';
 
 interface IPageRoutes {
@@ -9,8 +9,8 @@ interface IPageRoutes {
 
 export const PageRoutes: IPageRoutes[] = [
   {
-    path: '/login',
-    element: <Login />,
+    path: '/signin',
+    element: <SignIn />,
   },
   {
     path: '/*',

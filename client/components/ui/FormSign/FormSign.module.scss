@@ -1,0 +1,19 @@
+@import '../../../styles/variables';
+
+.label,
+.link {
+  font-size: 0.875rem;
+  color: $BOLD_TEXT;
+}
+
+.link {
+  transition: .3s color;
+
+  &:hover {
+    color: $ACCENT_COLOR;
+  }
+}
+
+.label {
+  margin-bottom: 10px;
+}

@@ -1,8 +1,10 @@
+@import '../../../styles/variables';
+
 .box {
   padding: 30px;
   border-radius: 14px;
-  border: 1px solid #e7e7e7;
+  border: 1px solid $SECTION_BOX_BD;
   box-shadow: 10px 10px 30px #e5e5e590;
   overflow: hidden;
-  background-color: #fafafa;
+  background-color: $SECTION_BOX_BG;
 }

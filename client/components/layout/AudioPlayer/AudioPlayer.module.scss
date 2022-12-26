@@ -24,8 +24,6 @@
   }
 
   &:hover {
-    cursor: pointer;
-
     & svg {
       & path {
         color: $ACCENT_COLOR;

@@ -1,0 +1,67 @@
+@import '../../styles/variables';
+
+$BLOCK_WIDTH: 50%;
+
+.box {
+  height: 100vh;
+}
+
+.block {
+  min-height: 100vh;
+  width: $BLOCK_WIDTH;
+}
+
+.preview {
+  position: relative;
+  background: url('/images/preview.jpg') no-repeat right;
+  background-size: cover;
+}
+
+.authForm {
+  width: 100%;
+  padding: 40px 0;
+  background-color: $VIEW_BG;
+}
+
+.formBox {
+  width: 260px;
+}
+
+.form {
+  margin-bottom: 20px;
+}
+
+.links {
+  margin-top: 20px;
+}
+
+.heading {
+  position: relative;
+  font-weight: 500;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 40px;
+  color: $BOLD_TEXT;
+
+  &::after {
+    content: attr(data-version);
+    position: absolute;
+    top: 5px;
+    right: -10px;
+    padding: 3px 8px 2px 8px;
+    border-radius: 10px;
+    font-size: 0.75rem;
+    color: #fff;
+    background-color: $RED_COLOR;
+  }
+}
+
+.scroll {
+  width: $BLOCK_WIDTH;
+  max-height: 100vh;
+  height: 100vh;
+}
+
+.submit {
+  margin: 0 auto;
+}

@@ -1,5 +1,5 @@
-import React, { FormEvent, useLayoutEffect, useState } from 'react';
-import { useSearchParams } from 'react-router-dom';
+import React, { FormEvent, useLayoutEffect, useEffect, useState } from 'react';
+import { useSearchParams, useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 
 import classNames from 'classnames';
@@ -9,6 +9,7 @@ import { Container } from '@components/global';
 import { FormSign, InputBox, PrimaryButton } from '@components/ui';
 import { SignInFields, FormSignList } from '@data';
 import { ISignInFormFields, SignInQueryType } from '@types';
+import { RouteService } from '@services';
 
 import { version as AppVersion } from '../../../package.json';
 
@@ -18,18 +19,26 @@ export const SignIn = () => {
   const [authStep, setAuthStep] = useState(0);
   const [searchParams, setSearchParams] = useSearchParams();
   const { register } = useForm<ISignInFormFields>();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const actQuery = searchParams.get('act') as SignInQueryType;
+
+    RouteService.watch(
+      {
+        page: 'signIn',
+        query: actQuery,
+      },
+      () => {
+        navigate('/signin?act=login');
+      }
+    );
+  }, [searchParams, setSearchParams, navigate]);
 
   useLayoutEffect(() => {
-    const SignInQueryList = ['login', 'join', 'restore'];
-    const query = searchParams.get('act') as SignInQueryType;
+    const actQuery = searchParams.get('act') as SignInQueryType;
 
-    if (!searchParams.has('act') || !SignInQueryList.includes(query)) {
-      setSearchParams({
-        act: 'login',
-      });
-    }
-
-    switch (query) {
+    switch (actQuery) {
       case 'login':
         setAuthStep(0);
         break;

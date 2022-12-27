@@ -23,6 +23,7 @@ export const SignIn = () => {
 
   useEffect(() => {
     const actQuery = searchParams.get('act') as SignInQueryType;
+
     const {
       signIn: { redirectTo },
     } = RouteService.supportQueries.pages;

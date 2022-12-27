@@ -25,7 +25,8 @@
       "@types": ["./types"],
       "@views": ["./views"],
       "@data": ["./data"],
-      "@utils": ["./utils"]
+      "@utils": ["./utils"],
+      "@services": ["./services"],
     }
   },
   "include": ["client"],

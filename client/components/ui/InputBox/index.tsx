@@ -1,6 +1,8 @@
 import React, { FC } from 'react';
 import { Path, UseFormRegister } from 'react-hook-form';
-import { InputType, ISignInFormFields } from '@types';
+
+import { ISignInFormFields, InputType } from '@types';
+
 import styles from './InputBox.module.scss';
 
 interface IInputBox {

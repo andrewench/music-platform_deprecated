@@ -1,5 +1,7 @@
 import React, { ReactNode } from 'react';
-import { SignIn, Application } from '@pages';
+
+import { Application, SignIn } from '@pages';
+
 import { PageRoutesPaths } from '@types';
 
 interface IPageRoutes {

@@ -1,10 +1,10 @@
 import React, { ReactNode } from 'react';
 import {
-  IoPersonOutline,
   IoChatbubblesOutline,
-  IoPeopleOutline,
-  IoRadioOutline,
   IoHeartOutline,
+  IoPeopleOutline,
+  IoPersonOutline,
+  IoRadioOutline,
   IoSettingsOutline,
 } from 'react-icons/io5';
 

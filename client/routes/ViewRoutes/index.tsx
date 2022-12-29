@@ -1,17 +1,19 @@
 import React, { ReactNode } from 'react';
+
+import { ViewRoutesPaths } from '@types';
+
 import {
+  Account,
+  Albums,
+  Artists,
+  Friends,
+  LikedSongs,
+  Messenger,
   Playlists,
   Podcasts,
-  Artists,
-  Albums,
-  Account,
-  Messenger,
-  Friends,
-  Subscriptions,
-  LikedSongs,
   Settings,
+  Subscriptions,
 } from '@views';
-import { ViewRoutesPaths } from '@types';
 
 interface IViewRoutes {
   path: ViewRoutesPaths;

@@ -1,10 +1,13 @@
-import React, { FC, ReactNode } from 'react';
 import classNames from 'classnames';
+
+import React, { FC, ReactNode } from 'react';
+
 import {
-  FlexAlignOnMainAxis,
-  FlexAlignOnCrossAxis,
   ContainerGap,
+  FlexAlignOnCrossAxis,
+  FlexAlignOnMainAxis,
 } from '@types';
+
 import styles from './Container.module.scss';
 
 interface IContainer {

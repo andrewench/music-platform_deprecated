@@ -1,6 +1,9 @@
-import React, { FC } from 'react';
-import { ButtonType } from '@types';
 import classNames from 'classnames';
+
+import React, { FC } from 'react';
+
+import { ButtonType } from '@types';
+
 import styles from './PrimaryButton.module.scss';
 
 interface IPrimaryButton {

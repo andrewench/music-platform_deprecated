@@ -1,9 +1,14 @@
+import { HeaderLinks } from '@data';
+
 import React from 'react';
 import { useLocation } from 'react-router-dom';
+
 import { Container } from '@components/global';
+
 import { HeaderLink } from '@components/ui';
-import { HeaderLinks } from '@data';
+
 import { FlexAlignOnMainAxis } from '@types';
+
 import styles from './Header.module.scss';
 
 export const Header = () => {

@@ -1,8 +1,13 @@
-import React from 'react';
 import classNames from 'classnames';
+
+import React from 'react';
+
 import { Container } from '@components/global';
-import { SectionTitle, PlaylistItem } from '@components/ui';
+
+import { PlaylistItem, SectionTitle } from '@components/ui';
+
 import { ContainerGap, IPlaylistData } from '@types';
+
 import styles from './SectionBox.module.scss';
 
 interface ISectionBox {

@@ -1,11 +1,15 @@
 import React from 'react';
+
 import { Container } from '@components/global';
+
 import {
-  ShowcaseListeners,
   AudioPlayer,
+  ShowcaseListeners,
   VolumeIndicator,
 } from '@components/layout';
+
 import { FlexAlignOnCrossAxis } from '@types';
+
 import styles from './Footer.module.scss';
 
 export const Footer = () => {

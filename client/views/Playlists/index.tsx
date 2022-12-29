@@ -1,8 +1,11 @@
-import React from 'react';
-import { Container, ViewContainer } from '@components/global';
-import { SectionBox } from '@components/ui';
-import { ContainerGap } from '@types';
 import { PlaylistsList } from '@data';
+import React from 'react';
+
+import { Container, ViewContainer } from '@components/global';
+
+import { SectionBox } from '@components/ui';
+
+import { ContainerGap } from '@types';
 
 export const Playlists = () => {
   return (

@@ -1,10 +1,10 @@
 import React, { ReactNode } from 'react';
 import {
-  IoShuffleOutline,
-  IoPlaySkipBackOutline,
   IoPlayCircleOutline,
+  IoPlaySkipBackOutline,
   IoPlaySkipForwardOutline,
   IoRepeatOutline,
+  IoShuffleOutline,
 } from 'react-icons/io5';
 
 interface IAudioPlayerButtons {

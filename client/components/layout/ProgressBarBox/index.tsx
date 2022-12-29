@@ -1,12 +1,16 @@
 import React from 'react';
+
 import { Container } from '@components/global';
+
 import { ProgressBar } from '@components/ui';
+
 import {
   ContainerGap,
   FlexAlignOnCrossAxis,
   FlexAlignOnMainAxis,
   IProgressBarOptions,
 } from '@types';
+
 import styles from './ProgressBarBox.module.scss';
 
 export const ProgressBarBox = ({

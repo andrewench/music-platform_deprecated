@@ -1,6 +1,8 @@
+import classNames from 'classnames';
+
 import React, { ReactNode } from 'react';
 import { Link } from 'react-router-dom';
-import classNames from 'classnames';
+
 import styles from './SideBarItem.module.scss';
 
 interface ISideBarItem {

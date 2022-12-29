@@ -1,9 +1,13 @@
-import React, { FC } from 'react';
-import { Link } from 'react-router-dom';
-import { IoArrowForward } from 'react-icons/io5';
 import classNames from 'classnames';
+
+import React, { FC } from 'react';
+import { IoArrowForward } from 'react-icons/io5';
+import { Link } from 'react-router-dom';
+
 import { Container } from '@components/global';
+
 import { ContainerGap, FlexAlignOnMainAxis } from '@types';
+
 import styles from './SectionTitle.module.scss';
 
 interface ISectionTitle {

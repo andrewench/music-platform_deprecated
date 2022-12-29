@@ -1,7 +1,10 @@
+import { ShowcaseListenersList } from '@data';
+
 import React from 'react';
 import { Link } from 'react-router-dom';
+
 import { Container } from '@components/global';
-import { ShowcaseListenersList } from '@data';
+
 import styles from './ShowcaseListeners.module.scss';
 
 export const ShowcaseListeners = () => {

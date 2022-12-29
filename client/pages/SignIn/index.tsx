@@ -1,14 +1,17 @@
-import React, { FormEvent, useLayoutEffect, useEffect, useState } from 'react';
-import { useSearchParams, useNavigate } from 'react-router-dom';
-import { useForm } from 'react-hook-form';
-
+import { FormSignList, SignInFields } from '@data';
 import classNames from 'classnames';
+
+import React, { FormEvent, useEffect, useLayoutEffect, useState } from 'react';
+import { useForm } from 'react-hook-form';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 import SimpleBar from 'simplebar-react';
 
 import { Container } from '@components/global';
+
 import { FormSign, InputBox, PrimaryButton } from '@components/ui';
-import { SignInFields, FormSignList } from '@data';
+
 import { ISignInFormFields, SignInQueryType } from '@types';
+
 import { RouteService } from '@services';
 
 import { version as AppVersion } from '../../../package.json';

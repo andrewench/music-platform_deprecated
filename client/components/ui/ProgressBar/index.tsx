@@ -1,6 +1,9 @@
 import React from 'react';
+
 import { IProgressBarOptions } from '@types';
+
 import { calculateProgress } from '@utils';
+
 import styles from './ProgressBar.module.scss';
 
 export const ProgressBar = ({

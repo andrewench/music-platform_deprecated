@@ -1,7 +1,10 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
+
 import { Container } from '@components/global';
-import { Header, SideBar, Footer } from '@components/layout';
+
+import { Footer, Header, SideBar } from '@components/layout';
+
 import { ViewRoutes } from '@routes';
 
 export const Application = () => {

@@ -1,9 +1,14 @@
-import React from 'react';
-import classNames from 'classnames';
-import { Container } from '@components/global';
-import { SideBarItem } from '@components/ui';
-import { FlexAlignOnCrossAxis, FlexAlignOnMainAxis } from '@types';
 import { SideBarItems } from '@data';
+import classNames from 'classnames';
+
+import React from 'react';
+
+import { Container } from '@components/global';
+
+import { SideBarItem } from '@components/ui';
+
+import { FlexAlignOnCrossAxis, FlexAlignOnMainAxis } from '@types';
+
 import styles from './SideBar.module.scss';
 
 export const SideBar = ({ className }: { className?: string }) => {

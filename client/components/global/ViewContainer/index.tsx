@@ -1,7 +1,9 @@
+import classNames from 'classnames';
+
 import React, { FC, ReactNode } from 'react';
 import SimpleBar from 'simplebar-react';
-import classNames from 'classnames';
 import 'simplebar-react/dist/simplebar.min.css';
+
 import styles from './ViewContainer.module.scss';
 
 interface IViewContainer {

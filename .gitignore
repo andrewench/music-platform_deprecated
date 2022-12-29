@@ -25,3 +25,6 @@ dist-ssr
 
 # Vite config timestamp files
 vite.config.ts*timestamp*
+
+# Server Build directory
+server/build

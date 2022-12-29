@@ -1,14 +1,18 @@
 {
   "name": "music-platform",
-  "private": true,
   "version": "0.1.0",
+  "description": "The music platform for listening to music",
+  "repository": "https://github.com/andrewench/music-platform",
+  "author": "andrewench",
+  "private": true,
   "type": "module",
   "scripts": {
     "client:dev": "vite",
     "client:build": "tsc && vite build",
     "client:preview": "vite preview",
     "client:lint": "eslint ./client --color",
-    "client:lint-fix": "eslint ./client --fix --color"
+    "client:lint-fix": "eslint ./client --fix --color",
+    "server:dev": "cd server && yarn run server:dev"
   },
   "dependencies": {
     "classnames": "^2.3.2",

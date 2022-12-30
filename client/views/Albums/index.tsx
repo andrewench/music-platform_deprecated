@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { ViewContainer } from '@components/global';
+
 export const Albums = () => {
-  return <div>Albums</div>;
+  return <ViewContainer>Albums</ViewContainer>;
 };

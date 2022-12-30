@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { ViewContainer } from '@components/global';
+
 export const LikedSongs = () => {
-  return <div>LikedSongs</div>;
+  return <ViewContainer>LikedSongs</ViewContainer>;
 };

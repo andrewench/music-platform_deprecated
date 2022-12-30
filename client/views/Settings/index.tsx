@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { ViewContainer } from '@components/global';
+
 export const Settings = () => {
-  return <div>Settings</div>;
+  return <ViewContainer>Settings</ViewContainer>;
 };

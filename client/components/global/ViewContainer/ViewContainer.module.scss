@@ -1,7 +1,11 @@
 @import '../../../styles/variables';
 
+$BOX_HEIGHT: calc(100vh - #{$HEADER_HEIGHT} - #{$AUDIO_PLAYER_HEIGHT});
+
 .box {
   padding: 40px;
+  min-height: $BOX_HEIGHT;
+  background-color: $VIEW_BG;
 }
 
 .scroll {

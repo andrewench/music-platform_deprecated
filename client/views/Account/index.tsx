@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { ViewContainer } from '@components/global';
+
 export const Account = () => {
-  return <div>Account</div>;
+  return <ViewContainer>Account</ViewContainer>;
 };

@@ -15,8 +15,12 @@ export const Header = () => {
   const location = useLocation();
 
   return (
-    <header>
-      <Container flex align={FlexAlignOnMainAxis.CENTER} className={styles.box}>
+    <header className={styles.box}>
+      <Container
+        flex
+        align={FlexAlignOnMainAxis.CENTER}
+        className={styles.content}
+      >
         {HeaderLinks.map(({ to, label }, idx) => (
           <HeaderLink
             active={location.pathname === to}

@@ -1,25 +1,47 @@
-import { BrowserWindow, app } from 'electron';
+import {
+  InstanceOptions,
+  InstanceOptionsType,
+  ViewOptions,
+  ViewOptionsType,
+} from '@config';
+import { BrowserView, BrowserWindow, app } from 'electron';
 
 declare const MAIN_WINDOW_WEBPACK_ENTRY: string;
-declare const MAIN_WINDOW_PRELOAD_WEBPACK_ENTRY: string;
 
 if (require('electron-squirrel-startup')) {
   app.quit();
 }
 
-const createWindow = (): void => {
-  const mainWindow = new BrowserWindow({
-    height: 600,
-    width: 800,
-    webPreferences: {
-      preload: MAIN_WINDOW_PRELOAD_WEBPACK_ENTRY,
-    },
-  });
+interface ILauncherOptions {
+  instanceOptions: InstanceOptionsType;
+  viewOptions: ViewOptionsType;
+}
 
-  mainWindow.loadURL(MAIN_WINDOW_WEBPACK_ENTRY);
-};
+class Launcher {
+  public instance: BrowserWindow = {} as BrowserWindow;
+  public view: BrowserView = {} as BrowserView;
 
-app.on('ready', createWindow);
+  constructor({ instanceOptions, viewOptions }: ILauncherOptions) {
+    this.instance = new BrowserWindow({
+      ...instanceOptions,
+    });
+
+    this.view = new BrowserView({
+      ...viewOptions,
+    });
+  }
+
+  static init() {
+    const { instance } = new Launcher({
+      instanceOptions: InstanceOptions,
+      viewOptions: ViewOptions,
+    });
+
+    instance.loadURL(MAIN_WINDOW_WEBPACK_ENTRY);
+  }
+}
+
+app.on('ready', () => Launcher.init());
 
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') {
@@ -29,6 +51,6 @@ app.on('window-all-closed', () => {
 
 app.on('activate', () => {
   if (!BrowserWindow.getAllWindows().length) {
-    createWindow();
+    Launcher.init();
   }
 });

@@ -1,4 +1,5 @@
 import { ShowcaseListenersList } from '@data';
+import classNames from 'classnames';
 
 import React from 'react';
 import { Link } from 'react-router-dom';
@@ -12,8 +13,15 @@ export const ShowcaseListeners = () => {
     <div className={styles.box}>
       <p className={styles.label}>Listening now:</p>
       <Container flex>
-        {ShowcaseListenersList.map(({ href, cover }, idx) => (
-          <Link to={href} key={idx}>
+        {ShowcaseListenersList.map(({ href, cover, played }, idx) => (
+          <Link
+            to={href}
+            className={classNames(styles.link, {
+              [styles.played]: played,
+              [styles.paused]: !played,
+            })}
+            key={idx}
+          >
             <img
               className={styles.avatar}
               src={cover}

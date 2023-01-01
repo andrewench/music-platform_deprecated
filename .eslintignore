@@ -3,4 +3,5 @@
 .git
 build
 server
+launcher
 vite.config.ts

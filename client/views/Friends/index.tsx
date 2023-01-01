@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { ViewContainer } from '@components/global';
+
 export const Friends = () => {
-  return <div>Friends</div>;
+  return <ViewContainer>Friends</ViewContainer>;
 };

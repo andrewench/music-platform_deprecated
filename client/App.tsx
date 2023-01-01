@@ -1,7 +1,9 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { PageRoutes } from '@routes';
 import './styles/App.scss';
+
+import React from 'react';
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+
+import { PageRoutes } from '@routes';
 
 const App = () => {
   return (

@@ -1,10 +1,12 @@
 @import '../../../styles/_variables';
 
 .box {
+  position: relative;
   min-width: $SIDEBAR_WIDTH;
   width: $SIDEBAR_WIDTH;
   height: $SIDEBAR_HEIGHT;
   overflow: hidden;
+  z-index: 1000;
   box-shadow: 0 0 1px $SIDEBAR_BD;
   background-color: $SIDEBAR_BG;
 }

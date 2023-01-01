@@ -1,17 +1,18 @@
 @import './variables';
 
 body {
-  background-color: $VIEW_BG;
+  overflow: hidden;
+  border-radius: 0 0 10px 10px;
 }
 
 .box {
   height: $SIDEBAR_HEIGHT;
 }
 
-.simplebar-scrollbar:before {
-  background-color: $SCROLL_BG;
+.simplebar-scrollbar::before {
+  background-color: $SCROLL_BG !important;
 }
 
 .simplebar-track.simplebar-vertical {
-  width: $SCROLL_WIDTH;
+  width: $SCROLL_WIDTH !important;
 }

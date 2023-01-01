@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { ViewContainer } from '@components/global';
+
 export const Subscriptions = () => {
-  return <div>Subscriptions</div>;
+  return <ViewContainer>Subscriptions</ViewContainer>;
 };

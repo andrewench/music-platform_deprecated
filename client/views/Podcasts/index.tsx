@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { ViewContainer } from '@components/global';
+
 export const Podcasts = () => {
-  return <div>Podcasts</div>;
+  return <ViewContainer>Podcasts</ViewContainer>;
 };

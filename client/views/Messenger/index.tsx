@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { ViewContainer } from '@components/global';
+
 export const Messenger = () => {
-  return <div>Messenger</div>;
+  return <ViewContainer>Messenger</ViewContainer>;
 };

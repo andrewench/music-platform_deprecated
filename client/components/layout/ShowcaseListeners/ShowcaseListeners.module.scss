@@ -2,7 +2,7 @@
 
 .box {
   padding-left: 40px;
-  min-width: $SIDEBAR_WIDTH;
+  min-width: 20%;
   width: $SIDEBAR_WIDTH;
 }
 
@@ -10,6 +10,34 @@
   margin: 14px 0 10px 0;
   font-size: 0.875rem;
   color: $BOLD_TEXT;
+}
+
+.link {
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    z-index: 100;
+    bottom: 0;
+    outline: 2px solid #fff;
+    right: 3px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+  }
+}
+
+.played {
+  &::after {
+    background-color: $LISTENER_PLAY;
+  }
+}
+
+.paused {
+  &::after {
+    background-color: $LISTENER_PLAY_PAUSED;
+  }
 }
 
 .avatar {

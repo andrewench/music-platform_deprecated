@@ -1,3 +1,6 @@
+import classNames from 'classnames';
+import isElectron from 'is-electron';
+
 import React from 'react';
 
 import { Container } from '@components/global';
@@ -17,7 +20,9 @@ export const Footer = () => {
     <Container
       flex
       content={FlexAlignOnCrossAxis.BETWEEN}
-      className={styles.box}
+      className={classNames(styles.box, {
+        [styles.rounded]: isElectron(),
+      })}
     >
       <ShowcaseListeners />
       <AudioPlayer />

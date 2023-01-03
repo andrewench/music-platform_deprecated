@@ -9,7 +9,9 @@ export const InstanceOptions: InstanceOptionsType = {
   minHeight: height,
   width,
   height,
+  frame: false,
   center: true,
+  transparent: true,
   webPreferences: {
     nodeIntegration: true,
     contextIsolation: false,

@@ -3,9 +3,34 @@
   <head>
     <meta charset="UTF-8" />
     <title>Music Platform</title>
-
+    <link rel="stylesheet" href="/main_window/assets/styles/index.css">
   </head>
   <body>
-    <p>Music Platform</p>
+    <div id="app">
+      <div class="app__title-bar flex">
+        <div class="title-bar__drag-area flex items-center">
+          <img src="/main_window/assets/icons/shortcut.svg" draggable="false" class="title-bar__shortcut">
+          <p class="title-bar__title">Music Platform</p>
+        </div>
+
+        <div class="title-bar__control-buttons flex">
+          <button class="title-bar__control-button">
+            <img src="/main_window/assets/icons/hamburger.svg" draggable="false">
+          </button>
+          <button class="title-bar__control-button">
+            <img src="/main_window/assets/icons/fullscreen.svg" draggable="false">
+          </button>
+          <button class="title-bar__control-button">
+            <img src="/main_window/assets/icons/minimize.svg" draggable="false">
+          </button>
+          <button class="title-bar__control-button">
+            <img src="/main_window/assets/icons/maximize.svg" draggable="false">
+          </button>
+          <button class="title-bar__control-button">
+            <img src="/main_window/assets/icons/close.svg" draggable="false">
+          </button>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

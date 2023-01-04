@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { ChangeEvent, FC } from 'react';
 import { Path, UseFormRegister } from 'react-hook-form';
 
 import { ISignInFormFields, InputType } from '@types';
@@ -11,6 +11,7 @@ interface IInputBox {
   type: InputType;
   register: UseFormRegister<ISignInFormFields>;
   required: boolean;
+  onChange?: (e: ChangeEvent<HTMLInputElement>) => void;
 }
 
 export const InputBox: FC<IInputBox> = ({
@@ -19,6 +20,7 @@ export const InputBox: FC<IInputBox> = ({
   type,
   register,
   required,
+  onChange,
 }) => {
   return (
     <div className={styles.box}>
@@ -27,6 +29,7 @@ export const InputBox: FC<IInputBox> = ({
         type={type}
         {...register(field, { required })}
         required
+        onChange={onChange}
       />
       <p className={styles.label}>{label}</p>
     </div>

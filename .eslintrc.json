@@ -80,7 +80,11 @@
       "path": "always",
       "types": "always"
       }
-    ]
+    ],
+    "@typescript-eslint/consistent-type-assertions": ["warn", {
+      "assertionStyle": "as",
+      "objectLiteralTypeAssertions": "allow"
+    }]
   },
   "settings": {
     "import/resolver": {

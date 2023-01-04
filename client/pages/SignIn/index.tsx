@@ -1,8 +1,13 @@
 import { FormSignList, SignInFields } from '@data';
 import classNames from 'classnames';
 
-import React, { FormEvent, useEffect, useLayoutEffect, useState } from 'react';
-import { useForm } from 'react-hook-form';
+import React, {
+  ChangeEvent,
+  useEffect,
+  useLayoutEffect,
+  useState,
+} from 'react';
+import { SubmitHandler, useForm } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import SimpleBar from 'simplebar-react';
@@ -15,6 +20,10 @@ import { ISignInFormFields, SignInQueryType } from '@types';
 
 import { RouteService } from '@services';
 
+import { useAppDispatch } from '@hooks';
+
+import { setUserField } from '@slices';
+
 import { version as AppVersion } from '../../../package.json';
 
 import styles from './SignIn.module.scss';
@@ -22,9 +31,15 @@ import styles from './SignIn.module.scss';
 export const SignIn = () => {
   const [authStep, setAuthStep] = useState(0);
   const [searchParams, setSearchParams] = useSearchParams();
-  const { register } = useForm<ISignInFormFields>();
+  const { register, handleSubmit } = useForm<ISignInFormFields>();
   const navigate = useNavigate();
   const { t } = useTranslation();
+  const dispatch = useAppDispatch();
+
+  const submitHandler: SubmitHandler<ISignInFormFields> = (data) => {
+    // eslint-disable-next-line no-console
+    console.log(data);
+  };
 
   useEffect(() => {
     const actQuery = searchParams.get('act') as SignInQueryType;
@@ -120,10 +135,7 @@ export const SignIn = () => {
   const renderAuthSteps = () => {
     return (
       <>
-        <form
-          onSubmit={(e: FormEvent) => e.preventDefault()}
-          className={styles.form}
-        >
+        <form onSubmit={handleSubmit(submitHandler)} className={styles.form}>
           {SignInFields.map(({ type, label, field, query: { act } }, idx) => {
             const query = searchParams.get('act') as SignInQueryType;
 
@@ -134,6 +146,14 @@ export const SignIn = () => {
                   label={t(label)}
                   field={field}
                   register={register}
+                  onChange={(e: ChangeEvent<HTMLInputElement>) =>
+                    dispatch(
+                      setUserField({
+                        key: field,
+                        value: e.target.value,
+                      })
+                    )
+                  }
                   key={idx}
                   required
                 />

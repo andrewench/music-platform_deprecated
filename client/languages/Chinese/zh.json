@@ -1,0 +1,44 @@
+{
+  "common": {
+    "showMorePlaylists": "显示更多的播放列表",
+    "listeningNow": "现在听",
+    "signIn": "登入",
+    "signUp": "报名",
+    "sendCode": "发送代码",
+    "restore": "恢复"
+  },
+  "header": {
+    "podcasts": "播客",
+    "playlists": "播放列表",
+    "artists": "艺术家",
+    "albums": "专辑"
+  },
+  "sidebar": {
+    "account": "我的账户",
+    "messenger": "信使",
+    "friends": "朋友们",
+    "subscriptions": "订阅",
+    "liked": "喜欢歌曲",
+    "settings": "设置"
+  },
+  "sections": {
+    "popular": "受欢迎的",
+    "related": "有关的",
+    "forYou": "为你"
+  },
+  "login": {
+    "fields": {
+      "firstname": "名",
+      "lastname": "姓",
+      "login": "登录",
+      "email": "电子邮件",
+      "password": "密码",
+      "confirm": "确认密码"
+    },
+    "signs": {
+      "accountNoExists": "您没有帐户吗？",
+      "accountExists": "已经有一个帐户？",
+      "forgotPassword": "忘记密码了吗？"
+    }
+  }
+}

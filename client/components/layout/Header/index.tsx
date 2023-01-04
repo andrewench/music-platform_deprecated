@@ -1,6 +1,7 @@
 import { HeaderLinks } from '@data';
 
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { useLocation } from 'react-router-dom';
 
 import { Container } from '@components/global';
@@ -13,6 +14,7 @@ import styles from './Header.module.scss';
 
 export const Header = () => {
   const location = useLocation();
+  const { t } = useTranslation();
 
   return (
     <header className={styles.box}>
@@ -25,7 +27,7 @@ export const Header = () => {
           <HeaderLink
             active={location.pathname === to}
             to={to}
-            label={label}
+            label={t(label)}
             key={idx}
           />
         ))}

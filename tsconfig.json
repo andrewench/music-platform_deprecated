@@ -27,6 +27,7 @@
       "@data": ["./data"],
       "@utils": ["./utils"],
       "@services": ["./services"],
+      "@languages": ["./languages"]
     }
   },
   "include": ["client"],

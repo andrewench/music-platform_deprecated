@@ -5,3 +5,4 @@ export { ShowcaseListenersList } from './ShowcaseListenersList';
 export { AudioPlayerButtons } from './AudioPlayerButtons';
 export { SignInFields } from './SignInFields';
 export { FormSignList } from './FormSignsList';
+export { SectionTitleList } from './SectionTitleList';

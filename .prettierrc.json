@@ -18,7 +18,10 @@
     "^@views$",
     "^@utils$",
     "^@services$",
+    "^@languages$",
     "^(.*.package.json)$",
+    "^(./App)$",
+    "^(./styles/*)",
     "^(.*.module.scss)$"
   ],
   "importOrderSeparation": true,

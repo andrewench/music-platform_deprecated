@@ -1,0 +1,44 @@
+{
+  "common": {
+    "showMorePlaylists": "Show more playlists",
+    "listeningNow": "Listening now",
+    "signIn": "Sign In",
+    "signUp": "Sign Up",
+    "sendCode": "Send code",
+    "restore": "Restore"
+  },
+  "header": {
+    "podcasts": "Podcasts",
+    "playlists": "Playlists",
+    "artists": "Artists",
+    "albums": "Albums"
+  },
+  "sidebar": {
+    "account": "My account",
+    "messenger": "Messenger",
+    "friends": "Friends",
+    "subscriptions": "Subscriptions",
+    "liked": "Liked songs",
+    "settings": "Settings"
+  },
+  "sections": {
+    "popular": "Popular",
+    "related": "Related",
+    "forYou": "For You"
+  },
+  "login": {
+    "fields": {
+      "firstname": "Firstname",
+      "lastname": "Lastname",
+      "login": "Login",
+      "email": "Email",
+      "password": "Password",
+      "confirm": "Confirm password"
+    },
+    "signs": {
+      "accountNoExists": "Are you haven't an account?",
+      "accountExists": "Already has an account?",
+      "forgotPassword": "Forgot your password?"
+    }
+  }
+}

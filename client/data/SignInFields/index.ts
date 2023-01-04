@@ -1,5 +1,6 @@
 import { Path } from 'react-hook-form';
-import { InputType, ISignInFormFields, SignInQueryType } from '@types';
+
+import { ISignInFormFields, InputType, SignInQueryType } from '@types';
 
 interface ISignInFields {
   type: InputType;
@@ -13,7 +14,7 @@ interface ISignInFields {
 export const SignInFields: ISignInFields[] = [
   {
     type: 'text',
-    label: 'Firstname',
+    label: 'login.fields.firstname',
     field: 'firstname',
     query: {
       act: ['join'],
@@ -21,7 +22,7 @@ export const SignInFields: ISignInFields[] = [
   },
   {
     type: 'text',
-    label: 'Lastname',
+    label: 'login.fields.lastname',
     field: 'lastname',
     query: {
       act: ['join'],
@@ -29,7 +30,7 @@ export const SignInFields: ISignInFields[] = [
   },
   {
     type: 'text',
-    label: 'Login',
+    label: 'login.fields.login',
     field: 'login',
     query: {
       act: ['login', 'join'],
@@ -37,7 +38,7 @@ export const SignInFields: ISignInFields[] = [
   },
   {
     type: 'text',
-    label: 'Email',
+    label: 'login.fields.email',
     field: 'email',
     query: {
       act: ['join', 'restore'],
@@ -45,7 +46,7 @@ export const SignInFields: ISignInFields[] = [
   },
   {
     type: 'password',
-    label: 'Password',
+    label: 'login.fields.password',
     field: 'password',
     query: {
       act: ['login', 'join'],
@@ -53,7 +54,7 @@ export const SignInFields: ISignInFields[] = [
   },
   {
     type: 'password',
-    label: 'Confirm password',
+    label: 'login.fields.confirm',
     field: 'confirm',
     query: {
       act: ['join'],

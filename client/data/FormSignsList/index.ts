@@ -16,24 +16,24 @@ const PATHNAME = '/signin';
 
 export const FormSignList: FormSign = {
   accountNoExists: {
-    label: "Are you haven't an account?",
+    label: 'login.signs.accountNoExists',
     link: {
       href: `${PATHNAME}?act=join`,
-      label: 'Sign up.',
+      label: 'common.signUp',
     },
   },
   accountExists: {
-    label: 'Already has an account?',
+    label: 'login.signs.accountExists',
     link: {
       href: `${PATHNAME}?act=login`,
-      label: 'Sign in.',
+      label: 'common.signIn',
     },
   },
   forgotPassword: {
-    label: 'Forgot your password?',
+    label: 'login.signs.forgotPassword',
     link: {
       href: `${PATHNAME}?act=restore`,
-      label: 'Restore.',
+      label: 'common.restore',
     },
   },
 };

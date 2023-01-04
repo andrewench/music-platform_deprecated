@@ -6,18 +6,18 @@ interface IHeaderLinks {
 export const HeaderLinks: IHeaderLinks[] = [
   {
     to: '/podcasts',
-    label: 'Podcasts',
+    label: 'header.podcasts',
   },
   {
     to: '/playlists',
-    label: 'Playlists',
+    label: 'header.playlists',
   },
   {
     to: '/artists',
-    label: 'Artists',
+    label: 'header.artists',
   },
   {
     to: '/albums',
-    label: 'Albums',
+    label: 'header.albums',
   },
 ];

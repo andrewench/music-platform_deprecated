@@ -3,6 +3,7 @@ import classNames from 'classnames';
 
 import React, { FormEvent, useEffect, useLayoutEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
+import { useTranslation } from 'react-i18next';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import SimpleBar from 'simplebar-react';
 
@@ -23,6 +24,7 @@ export const SignIn = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const { register } = useForm<ISignInFormFields>();
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   useEffect(() => {
     const actQuery = searchParams.get('act') as SignInQueryType;
@@ -68,18 +70,18 @@ export const SignIn = () => {
       return (
         <>
           <FormSign
-            label={password.label}
+            label={t(password.label)}
             link={{
               href: password.link.href,
-              label: password.link.label,
+              label: `${t(password.link.label)}.`,
             }}
           />
 
           <FormSign
-            label={signUp.label}
+            label={t(signUp.label)}
             link={{
               href: signUp.link.href,
-              label: signUp.link.label,
+              label: `${t(signUp.link.label)}.`,
             }}
           />
         </>
@@ -89,10 +91,10 @@ export const SignIn = () => {
     if (step === 1 || step === 2) {
       return (
         <FormSign
-          label={FormSignList.accountExists.label}
+          label={t(FormSignList.accountExists.label)}
           link={{
             href: FormSignList.accountExists.link.href,
-            label: FormSignList.accountExists.link.label,
+            label: `${t(FormSignList.accountExists.link.label)}.`,
           }}
         />
       );
@@ -100,7 +102,11 @@ export const SignIn = () => {
   };
 
   const renderSubmitButton = () => {
-    const labels = ['Sign In', 'Sign Up', 'Send email'];
+    const labels = [
+      t('common.signIn'),
+      t('common.signUp'),
+      t('common.sendCode'),
+    ];
 
     return (
       <PrimaryButton
@@ -125,7 +131,7 @@ export const SignIn = () => {
               act.includes(query) && (
                 <InputBox
                   type={type}
-                  label={label}
+                  label={t(label)}
                   field={field}
                   register={register}
                   key={idx}

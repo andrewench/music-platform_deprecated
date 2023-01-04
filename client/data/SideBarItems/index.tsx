@@ -17,32 +17,32 @@ interface ISideBarItems {
 export const SideBarItems: ISideBarItems[] = [
   {
     to: '/account',
-    label: 'My account',
+    label: 'sidebar.account',
     icon: <IoPersonOutline size={18} />,
   },
   {
     to: '/messenger',
-    label: 'Messenger',
+    label: 'sidebar.messenger',
     icon: <IoChatbubblesOutline size={18} />,
   },
   {
     to: '/friends',
-    label: 'Friends',
+    label: 'sidebar.friends',
     icon: <IoPeopleOutline size={18} />,
   },
   {
     to: '/subscriptions',
-    label: 'Subscriptions',
+    label: 'sidebar.subscriptions',
     icon: <IoRadioOutline size={18} />,
   },
   {
     to: '/favourites',
-    label: 'Liked songs',
+    label: 'sidebar.liked',
     icon: <IoHeartOutline size={18} />,
   },
   {
     to: '/settings',
-    label: 'Settings',
+    label: 'sidebar.settings',
     icon: <IoSettingsOutline size={18} />,
   },
 ];

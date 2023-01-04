@@ -2,6 +2,7 @@ import { SideBarItems } from '@data';
 import classNames from 'classnames';
 
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { Container } from '@components/global';
 
@@ -12,6 +13,8 @@ import { FlexAlignOnCrossAxis, FlexAlignOnMainAxis } from '@types';
 import styles from './SideBar.module.scss';
 
 export const SideBar = ({ className }: { className?: string }) => {
+  const { t } = useTranslation();
+
   return (
     <Container flex column className={classNames(styles.box, className)}>
       <div className={styles.avatarBox}>
@@ -39,8 +42,8 @@ export const SideBar = ({ className }: { className?: string }) => {
         </Container>
 
         <ul className={styles.menu}>
-          {SideBarItems.map((props, idx) => (
-            <SideBarItem {...props} key={idx} />
+          {SideBarItems.map(({ label, ...props }, idx) => (
+            <SideBarItem label={t(label)} {...props} key={idx} />
           ))}
         </ul>
       </Container>

@@ -1,5 +1,6 @@
-import express, { Request, Response, Application } from 'express';
 import dotenv from 'dotenv';
+import express, { Application, Request, Response } from 'express';
+
 import routes from '@routes';
 
 dotenv.config();

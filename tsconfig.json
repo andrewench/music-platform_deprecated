@@ -31,7 +31,8 @@
       "@store": ["./store"],
       "@slices": ["./slices"],
       "@hooks": ["./hooks"],
-      "@reducers": ["./reducers"]
+      "@reducers": ["./reducers"],
+      "@api": ["./api"],
     }
   },
   "include": ["client"],

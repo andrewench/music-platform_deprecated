@@ -8,8 +8,8 @@ const app: Application = express();
 
 const SERVER_PORT = process.env.SERVER_PORT || 5183;
 
-app.use('/', routes);
 app.use(express.json());
+app.use('/', routes);
 
 app.get('/api', (req: Request, res: Response) => {
   res.status(200).json({

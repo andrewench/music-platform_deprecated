@@ -1,30 +1,30 @@
 {
   "compilerOptions": {
-    "baseUrl": "./",
-    "target": "ES2016",
-    "module": "ESNext",
+    "baseUrl": "./src",
+    "target": "es5",
+    "module": "CommonJS",
     "moduleResolution": "node",
     "outDir": "./build",
     "noEmitOnError": true,
     "esModuleInterop": true,
     "removeComments": true,
     "forceConsistentCasingInFileNames": true,
+    "allowSyntheticDefaultImports": true,
     "strict": true,
     "noImplicitAny": true,
     "alwaysStrict": true,
     "skipLibCheck": true,
     "paths": {
       "@routes": ["./routes"],
-      "@services": ["./services"]
+      "@services": ["./services"],
+      "@types": ["./types"],
+      "@models": ["./models"],
     }
   },
-  "include": ["./"],
-  "tsc-alias": {
-    "resolveFullPaths": true
-  },
+  "include": ["./src/**/*", "webpack.config.ts"],
   "ts-node": {
-    "require": ["tsconfig-paths/register"],
-    "esm": true,
-    "experimentalSpecifierResolution": "node",
+    "compilerOptions": {
+      "module": "CommonJS"
+    },
   }
 }

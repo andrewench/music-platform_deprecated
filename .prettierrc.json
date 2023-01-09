@@ -23,6 +23,7 @@
     "^@reducers$",
     "^@store$",
     "^@slices$",
+    "^@api$",
     "^(.*.package.json)$",
     "^(./App)$",
     "^(./styles/*)",

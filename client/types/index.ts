@@ -9,3 +9,4 @@ export type { InputType } from './InputType';
 export type { ButtonType } from './ButtonType';
 export type { ISignInFormFields } from './SignInFields';
 export type { SignInQueryType } from './SignInQueryType';
+export type { SignUpFieldsType } from './SignUpFieldsType';

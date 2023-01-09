@@ -1,5 +1,7 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
+import type { SignUpFieldsType } from '@types';
+
 export const userApi = createApi({
   reducerPath: 'userApi',
   baseQuery: fetchBaseQuery({
@@ -7,8 +9,11 @@ export const userApi = createApi({
   }),
   endpoints: (build) => ({
     addNewUser: build.mutation({
-      query: (payload) => ({
+      query: (payload: SignUpFieldsType) => ({
         url: '/users',
+        headers: {
+          'Content-Type': 'application/json',
+        },
         method: 'PUT',
         body: payload,
       }),

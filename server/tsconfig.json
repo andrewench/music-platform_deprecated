@@ -19,8 +19,12 @@
       "@services": ["./services"],
       "@types": ["./types"],
       "@models": ["./models"],
+      "@middlewares": ["./middlewares"]
     }
   },
+  "files": [
+    "index.d.ts"
+  ],
   "include": ["./src/**/*", "webpack.config.ts"],
   "ts-node": {
     "compilerOptions": {

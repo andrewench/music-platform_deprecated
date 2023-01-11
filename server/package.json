@@ -13,9 +13,9 @@
     "server:build_watch": "webpack build --watch",
     "server:watch": "nodemon build/index.js",
     "server:dev": "concurrently --names \"WEBPACK,SERVER\" -c \"red,blue\" \"yarn:server:build_watch\" \"yarn:server:watch\"",
-    "database:preview": "prisma studio",
-    "database:pull": "prisma db pull",
-    "database:push": "prisma db push"
+    "db:preview": "prisma studio",
+    "db:pull": "prisma db pull",
+    "db:push": "prisma db push"
   },
   "devDependencies": {
     "@types/express": "^4.17.15",

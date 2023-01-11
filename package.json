@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "description": "The music platform for listening to music",
   "repository": "https://github.com/andrewench/music-platform",
+  "keywords": "react, vite, typescript, scss",
   "author": "andrewench",
   "private": true,
   "type": "module",
@@ -10,10 +11,14 @@
     "client:dev": "vite",
     "client:build": "tsc && vite build",
     "client:preview": "vite preview",
+
     "client:lint": "eslint ./client --color",
     "client:lint-fix": "eslint ./client --fix --color",
+
     "server:dev": "cd server && yarn run server:dev",
-    "prettier:write": "prettier --write ./client/**/**/**/*.tsx"
+    "server:lint": "cd server && yarn run server:lint",
+
+    "db:preview": "cd server && yarn run db:preview"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.1",
@@ -63,7 +68,7 @@
     }
   },
   "lint-staged": {
-    "*.tsx": [
+    "*{.ts, .tsx}": [
       "yarn run client:lint",
       "git add"
     ]

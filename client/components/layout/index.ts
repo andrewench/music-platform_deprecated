@@ -5,3 +5,6 @@ export { ShowcaseListeners } from './ShowcaseListeners';
 export { AudioPlayer } from './AudioPlayer';
 export { VolumeIndicator } from './VolumeIndicator';
 export { ProgressBarBox } from './ProgressBarBox';
+export { SignInFormSigns } from './SignInFormSigns';
+export { SignInFormSubmit } from './SignInFormSubmit';
+export { SignInForm } from './SignInForm';

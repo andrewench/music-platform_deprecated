@@ -6,15 +6,12 @@ interface IFormSignKey {
   };
 }
 
-type FormSignKeys = 'accountNoExists' | 'accountExists' | 'forgotPassword';
-
-type FormSign = {
-  [K in FormSignKeys]: IFormSignKey;
-};
+type FormSignKeysType = 'accountNoExists' | 'accountExists' | 'forgotPassword';
+type FormSignType = Record<FormSignKeysType, IFormSignKey>;
 
 const PATHNAME = '/signin';
 
-export const FormSignList: FormSign = {
+export const FormSignsList: FormSignType = {
   accountNoExists: {
     label: 'login.signs.accountNoExists',
     link: {

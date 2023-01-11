@@ -17,6 +17,7 @@
     "^@types$",
     "^@views$",
     "^@utils$",
+    "^@data$",
     "^@services$",
     "^@languages$",
     "^@hooks$",

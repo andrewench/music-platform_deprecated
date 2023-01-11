@@ -10,4 +10,9 @@ export type { ButtonType } from './ButtonType';
 export type { ISignInFormFields } from './SignInFields';
 export type { SignInQueryType } from './SignInQueryType';
 export type { SignUpFieldsType } from './SignUpFieldsType';
+export type {
+  RoutesType,
+  MainApiRouteType,
+  ApiEndpointsType,
+} from './RoutesType';
 export { SignInFormSteps } from './SignInFormSteps';

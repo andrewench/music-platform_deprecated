@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import { Container } from '@components/global';
+import { Container } from '@/components/global';
 
-import { IPlaylistData } from '@types';
+import { IPlaylistData } from '@/types';
 
 import styles from './PlaylistItem.module.scss';
 

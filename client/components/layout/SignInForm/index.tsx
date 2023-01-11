@@ -3,19 +3,19 @@ import { SubmitHandler, useForm } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 import { useSearchParams } from 'react-router-dom';
 
-import { SignInFormSigns, SignInFormSubmit } from '@components/layout';
+import { SignInFormSigns, SignInFormSubmit } from '@/components/layout';
 
-import { InputBox } from '@components/ui';
+import { InputBox } from '@/components/ui';
 
-import { ISignInFormFields, SignInFormSteps, SignInQueryType } from '@types';
+import { ISignInFormFields, SignInFormSteps, SignInQueryType } from '@/types';
 
-import { isAllFieldsFilled } from '@utils';
+import { isAllFieldsFilled } from '@/utils';
 
-import { SignInFields } from '@data';
+import { SignInFields } from '@/data';
 
-import { useAppDispatch } from '@hooks';
+import { useAppDispatch } from '@/hooks';
 
-import { setUserField } from '@slices';
+import { setUserField } from '@/slices';
 
 import styles from './SignInForm.module.scss';
 

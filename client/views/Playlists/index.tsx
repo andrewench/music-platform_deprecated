@@ -1,13 +1,13 @@
-import { PlaylistsList, SectionTitleList } from '@data';
-
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { Container, ViewContainer } from '@components/global';
+import { Container, ViewContainer } from '@/components/global';
 
-import { SectionBox } from '@components/ui';
+import { SectionBox } from '@/components/ui';
 
-import { ContainerGap } from '@types';
+import { ContainerGap } from '@/types';
+
+import { PlaylistsList, SectionTitleList } from '@/data';
 
 export const Playlists = () => {
   const { t } = useTranslation();

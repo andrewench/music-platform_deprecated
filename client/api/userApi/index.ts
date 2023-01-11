@@ -4,7 +4,7 @@ import type {
   ApiEndpointsType,
   MainApiRouteType,
   SignUpFieldsType,
-} from '@types';
+} from '@/types';
 
 export const userApi = createApi({
   reducerPath: 'userApi',

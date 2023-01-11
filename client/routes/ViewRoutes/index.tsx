@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react';
 
-import { ViewRoutesPaths } from '@types';
+import { ViewRoutesPaths } from '@/types';
 
 import {
   Account,
@@ -13,7 +13,7 @@ import {
   Podcasts,
   Settings,
   Subscriptions,
-} from '@views';
+} from '@/views';
 
 interface IViewRoutes {
   path: ViewRoutesPaths;

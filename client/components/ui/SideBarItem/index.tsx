@@ -1,4 +1,4 @@
-import classNames from 'classnames';
+import cn from 'classnames';
 
 import React, { ReactNode } from 'react';
 import { Link } from 'react-router-dom';
@@ -14,11 +14,7 @@ interface ISideBarItem {
 export const SideBarItem = ({ label, icon, to }: ISideBarItem) => {
   return (
     <li className={styles.item}>
-      <Link
-        to={to}
-        draggable={false}
-        className={classNames(styles.link, 'gap-10')}
-      >
+      <Link to={to} draggable={false} className={cn(styles.link, 'gap-10')}>
         <>
           {icon}
           <p>{label}</p>

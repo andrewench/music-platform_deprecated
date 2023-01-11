@@ -1,14 +1,14 @@
-import { HeaderLinks } from '@data';
-
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { useLocation } from 'react-router-dom';
 
-import { Container } from '@components/global';
+import { Container } from '@/components/global';
 
-import { HeaderLink } from '@components/ui';
+import { HeaderLink } from '@/components/ui';
 
-import { FlexAlignOnMainAxis } from '@types';
+import { FlexAlignOnMainAxis } from '@/types';
+
+import { HeaderLinks } from '@/data';
 
 import styles from './Header.module.scss';
 

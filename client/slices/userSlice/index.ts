@@ -1,8 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-import { ISignInFormFields } from '@types';
+import { ISignInFormFields } from '@/types';
 
-import { updateStoreFieldByKey } from '@reducers';
+import { updateStoreFieldByKey } from '@/reducers';
 
 const initialState: ISignInFormFields = {} as ISignInFormFields;
 

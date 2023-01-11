@@ -1,14 +1,15 @@
-import { SideBarItems } from '@data';
-import classNames from 'classnames';
+import cn from 'classnames';
 
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { Container } from '@components/global';
+import { Container } from '@/components/global';
 
-import { SideBarItem } from '@components/ui';
+import { SideBarItem } from '@/components/ui';
 
-import { FlexAlignOnCrossAxis, FlexAlignOnMainAxis } from '@types';
+import { FlexAlignOnCrossAxis, FlexAlignOnMainAxis } from '@/types';
+
+import { SideBarItems } from '@/data';
 
 import styles from './SideBar.module.scss';
 
@@ -16,7 +17,7 @@ export const SideBar = ({ className }: { className?: string }) => {
   const { t } = useTranslation();
 
   return (
-    <Container flex column className={classNames(styles.box, className)}>
+    <Container flex column className={cn(styles.box, className)}>
       <div className={styles.avatarBox}>
         <img
           src="/images/avatar.png"

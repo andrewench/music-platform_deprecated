@@ -1,8 +1,8 @@
-import classNames from 'classnames';
+import cn from 'classnames';
 
 import React, { FC } from 'react';
 
-import { ButtonType } from '@types';
+import { ButtonType } from '@/types';
 
 import styles from './PrimaryButton.module.scss';
 
@@ -20,7 +20,7 @@ export const PrimaryButton: FC<IPrimaryButton> = ({
   return (
     <button
       type={type === 'submit' ? 'submit' : 'button'}
-      className={classNames(styles.button, className)}
+      className={cn(styles.button, className)}
     >
       {label}
     </button>

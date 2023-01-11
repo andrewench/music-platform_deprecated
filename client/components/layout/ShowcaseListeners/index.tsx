@@ -1,11 +1,12 @@
-import { ShowcaseListenersList } from '@data';
-import classNames from 'classnames';
+import cn from 'classnames';
 
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 
-import { Container } from '@components/global';
+import { Container } from '@/components/global';
+
+import { ShowcaseListenersList } from '@/data';
 
 import styles from './ShowcaseListeners.module.scss';
 
@@ -19,7 +20,7 @@ export const ShowcaseListeners = () => {
         {ShowcaseListenersList.map(({ href, cover, played }, idx) => (
           <Link
             to={href}
-            className={classNames(styles.link, {
+            className={cn(styles.link, {
               [styles.played]: played,
               [styles.paused]: !played,
             })}

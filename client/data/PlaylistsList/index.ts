@@ -1,4 +1,4 @@
-import { IPlaylistData } from '@types';
+import { IPlaylistData } from '@/types';
 
 export const PlaylistsList: IPlaylistData[] = [
   {

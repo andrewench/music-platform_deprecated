@@ -1,12 +1,12 @@
-import classNames from 'classnames';
+import cn from 'classnames';
 
 import React, { FC } from 'react';
 import { IoArrowForward } from 'react-icons/io5';
 import { Link } from 'react-router-dom';
 
-import { Container } from '@components/global';
+import { Container } from '@/components/global';
 
-import { ContainerGap, FlexAlignOnMainAxis } from '@types';
+import { ContainerGap, FlexAlignOnMainAxis } from '@/types';
 
 import styles from './SectionTitle.module.scss';
 
@@ -25,7 +25,7 @@ export const SectionTitle: FC<ISectionTitle> = ({ label, href, labelLink }) => {
       className={styles.section}
     >
       <p className={styles.label}>{label}</p>
-      <span className={classNames(styles.line, 'gradient-line')} />
+      <span className={cn(styles.line, 'gradient-line')} />
 
       <Link to={href} className={styles.link}>
         <Container

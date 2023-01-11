@@ -1,9 +1,9 @@
 import React, { FC } from 'react';
 import { Link } from 'react-router-dom';
 
-import { Container } from '@components/global';
+import { Container } from '@/components/global';
 
-import { ContainerGap, FlexAlignOnCrossAxis } from '@types';
+import { ContainerGap, FlexAlignOnCrossAxis } from '@/types';
 
 import styles from './FormSign.module.scss';
 

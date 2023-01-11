@@ -15,11 +15,11 @@
     "alwaysStrict": true,
     "skipLibCheck": true,
     "paths": {
-      "@routes": ["./routes"],
-      "@services": ["./services"],
-      "@types": ["./types"],
-      "@models": ["./models"],
-      "@middlewares": ["./middlewares"]
+      "@/routes": ["./routes"],
+      "@/services": ["./services"],
+      "@/types": ["./types"],
+      "@/models": ["./models"],
+      "@/middlewares": ["./middlewares"]
     }
   },
   "files": [

@@ -1,16 +1,16 @@
-import classNames from 'classnames';
+import cn from 'classnames';
 
 import React, { useEffect, useLayoutEffect, useState } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import SimpleBar from 'simplebar-react';
 
-import { Container } from '@components/global';
+import { Container } from '@/components/global';
 
-import { SignInForm } from '@components/layout';
+import { SignInForm } from '@/components/layout';
 
-import { SignInQueryType } from '@types';
+import { SignInQueryType } from '@/types';
 
-import { RouteService } from '@services';
+import { RouteService } from '@/services';
 
 import { version as AppVersion } from '../../../package.json';
 
@@ -59,14 +59,10 @@ export const SignIn = () => {
 
   return (
     <Container flex className={styles.box}>
-      <div className={classNames(styles.preview, styles.block)} />
+      <div className={cn(styles.preview, styles.block)} />
 
       <SimpleBar className={styles.scroll}>
-        <Container
-          flex
-          center
-          className={classNames(styles.authForm, styles.block)}
-        >
+        <Container flex center className={cn(styles.authForm, styles.block)}>
           <Container flex column className={styles.formBox}>
             <h1 className={styles.heading} data-version={AppVersion}>
               Music Platform

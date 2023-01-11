@@ -1,4 +1,4 @@
-import classNames from 'classnames';
+import cn from 'classnames';
 
 import React, { FC, ReactNode } from 'react';
 import SimpleBar from 'simplebar-react';
@@ -14,7 +14,7 @@ interface IViewContainer {
 export const ViewContainer: FC<IViewContainer> = ({ className, children }) => {
   return (
     <SimpleBar className={styles.scroll}>
-      <div className={classNames(styles.box, className)}>{children}</div>
+      <div className={cn(styles.box, className)}>{children}</div>
     </SimpleBar>
   );
 };

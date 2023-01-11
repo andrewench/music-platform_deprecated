@@ -1,4 +1,4 @@
-import classNames from 'classnames';
+import cn from 'classnames';
 
 import React, { FC } from 'react';
 import { Link } from 'react-router-dom';
@@ -14,7 +14,7 @@ interface IHeaderLink {
 export const HeaderLink: FC<IHeaderLink> = ({ to, label, active }) => {
   return (
     <Link
-      className={classNames(styles.link, {
+      className={cn(styles.link, {
         [styles.active]: active,
       })}
       to={to}

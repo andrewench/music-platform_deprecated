@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react';
 import { Route, Routes, useLocation, useNavigate } from 'react-router-dom';
 
-import { Container } from '@components/global';
+import { Container } from '@/components/global';
 
-import { Footer, Header, SideBar } from '@components/layout';
+import { Footer, Header, SideBar } from '@/components/layout';
 
-import { ViewRoutes } from '@routes';
+import { ViewRoutes } from '@/routes';
 
 export const Application = () => {
   const location = useLocation();

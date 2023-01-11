@@ -1,6 +1,6 @@
 import { Path } from 'react-hook-form';
 
-import { ISignInFormFields, InputType, SignInQueryType } from '@types';
+import { ISignInFormFields, InputType, SignInQueryType } from '@/types';
 
 interface ISignInFields {
   type: InputType;

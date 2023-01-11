@@ -1,15 +1,15 @@
 import React from 'react';
 
-import { Container } from '@components/global';
+import { Container } from '@/components/global';
 
-import { ProgressBar } from '@components/ui';
+import { ProgressBar } from '@/components/ui';
 
 import {
   ContainerGap,
   FlexAlignOnCrossAxis,
   FlexAlignOnMainAxis,
   IProgressBarOptions,
-} from '@types';
+} from '@/types';
 
 import styles from './ProgressBarBox.module.scss';
 

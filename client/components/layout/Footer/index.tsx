@@ -1,17 +1,17 @@
-import classNames from 'classnames';
+import cn from 'classnames';
 import isElectron from 'is-electron';
 
 import React from 'react';
 
-import { Container } from '@components/global';
+import { Container } from '@/components/global';
 
 import {
   AudioPlayer,
   ShowcaseListeners,
   VolumeIndicator,
-} from '@components/layout';
+} from '@/components/layout';
 
-import { FlexAlignOnCrossAxis } from '@types';
+import { FlexAlignOnCrossAxis } from '@/types';
 
 import styles from './Footer.module.scss';
 
@@ -20,7 +20,7 @@ export const Footer = () => {
     <Container
       flex
       content={FlexAlignOnCrossAxis.BETWEEN}
-      className={classNames(styles.box, {
+      className={cn(styles.box, {
         [styles.rounded]: isElectron(),
       })}
     >

@@ -1,11 +1,11 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { FormSign } from '@components/ui';
+import { FormSign } from '@/components/ui';
 
-import { SignInFormSteps } from '@types';
+import { SignInFormSteps } from '@/types';
 
-import { FormSignsList } from '@data';
+import { FormSignsList } from '@/data';
 
 export const SignInFormSigns = ({ step }: { step: SignInFormSteps }) => {
   const { forgotPassword, accountNoExists, accountExists } = FormSignsList;

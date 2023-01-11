@@ -1,9 +1,9 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { PrimaryButton } from '@components/ui';
+import { PrimaryButton } from '@/components/ui';
 
-import { SignInFormSteps } from '@types';
+import { SignInFormSteps } from '@/types';
 
 import styles from './SignInFormSubmit.module.scss';
 

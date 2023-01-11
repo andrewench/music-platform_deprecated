@@ -1,7 +1,7 @@
 import React, { ChangeEvent, FC } from 'react';
 import { Path, UseFormRegister } from 'react-hook-form';
 
-import { ISignInFormFields, InputType } from '@types';
+import { ISignInFormFields, InputType } from '@/types';
 
 import styles from './InputBox.module.scss';
 

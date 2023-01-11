@@ -1,8 +1,8 @@
 import React, { ReactNode } from 'react';
 
-import { Application, SignIn } from '@pages';
+import { Application, SignIn } from '@/pages';
 
-import { PageRoutesPaths } from '@types';
+import { PageRoutesPaths } from '@/types';
 
 interface IPageRoutes {
   path: PageRoutesPaths;

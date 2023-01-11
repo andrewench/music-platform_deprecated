@@ -1,4 +1,4 @@
-import classNames from 'classnames';
+import cn from 'classnames';
 
 import React, { FC, ReactNode } from 'react';
 
@@ -6,7 +6,7 @@ import {
   ContainerGap,
   FlexAlignOnCrossAxis,
   FlexAlignOnMainAxis,
-} from '@types';
+} from '@/types';
 
 import styles from './Container.module.scss';
 
@@ -35,7 +35,7 @@ export const Container: FC<IContainer> = ({
 }) => {
   return (
     <div
-      className={classNames(className, {
+      className={cn(className, {
         [styles.flexContainer]: flex,
         [styles.flexCol]: column,
         [styles.flexFullCenter]: center,

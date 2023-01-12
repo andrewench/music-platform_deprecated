@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Container } from '@/components/global';
+import { FlexContainer } from '@/components/global';
 
 import { ProgressBarBox } from '@/components/layout';
 
@@ -16,15 +16,13 @@ import styles from './AudioPlayer.module.scss';
 
 export const AudioPlayer = () => {
   return (
-    <Container
-      flex
+    <FlexContainer
       column
       align={FlexAlignOnMainAxis.CENTER}
       content={FlexAlignOnCrossAxis.CENTER}
       gap={ContainerGap.MEDIUM}
     >
-      <Container
-        flex
+      <FlexContainer
         align={FlexAlignOnMainAxis.CENTER}
         content={FlexAlignOnCrossAxis.CENTER}
       >
@@ -33,9 +31,9 @@ export const AudioPlayer = () => {
             <span>{icon}</span>
           </button>
         ))}
-      </Container>
+      </FlexContainer>
 
       <ProgressBarBox currentProgress={30} maxWidth={380} />
-    </Container>
+    </FlexContainer>
   );
 };

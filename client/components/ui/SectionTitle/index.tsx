@@ -4,7 +4,7 @@ import React, { FC } from 'react';
 import { IoArrowForward } from 'react-icons/io5';
 import { Link } from 'react-router-dom';
 
-import { Container } from '@/components/global';
+import { FlexContainer } from '@/components/global';
 
 import { ContainerGap, FlexAlignOnMainAxis } from '@/types';
 
@@ -18,8 +18,7 @@ interface ISectionTitle {
 
 export const SectionTitle: FC<ISectionTitle> = ({ label, href, labelLink }) => {
   return (
-    <Container
-      flex
+    <FlexContainer
       gap={ContainerGap.MEDIUM}
       align={FlexAlignOnMainAxis.CENTER}
       className={styles.section}
@@ -28,15 +27,14 @@ export const SectionTitle: FC<ISectionTitle> = ({ label, href, labelLink }) => {
       <span className={cn(styles.line, 'gradient-line')} />
 
       <Link to={href} className={styles.link}>
-        <Container
-          flex
+        <FlexContainer
           align={FlexAlignOnMainAxis.CENTER}
           gap={ContainerGap.EXTRASMALL}
         >
           {labelLink}
           <IoArrowForward />
-        </Container>
+        </FlexContainer>
       </Link>
-    </Container>
+    </FlexContainer>
   );
 };

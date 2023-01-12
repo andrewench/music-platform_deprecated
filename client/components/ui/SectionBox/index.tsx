@@ -2,7 +2,7 @@ import cn from 'classnames';
 
 import React from 'react';
 
-import { Container } from '@/components/global';
+import { FlexContainer } from '@/components/global';
 
 import { PlaylistItem, SectionTitle } from '@/components/ui';
 
@@ -25,11 +25,11 @@ export const SectionBox = ({ items, title, className }: ISectionBox) => {
     <div className={cn(styles.box, className)}>
       <SectionTitle {...title} />
 
-      <Container flex grid gap={ContainerGap.LARGE}>
+      <FlexContainer grid gap={ContainerGap.LARGE}>
         {items.map((props, idx) => (
           <PlaylistItem {...props} key={idx} />
         ))}
-      </Container>
+      </FlexContainer>
     </div>
   );
 };

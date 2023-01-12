@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Route, Routes, useLocation, useNavigate } from 'react-router-dom';
 
-import { Container } from '@/components/global';
+import { FlexContainer } from '@/components/global';
 
 import { Footer, Header, SideBar } from '@/components/layout';
 
@@ -19,10 +19,10 @@ export const Application = () => {
 
   return (
     <>
-      <Container flex>
+      <FlexContainer>
         <SideBar />
 
-        <Container flex column>
+        <FlexContainer column>
           <Header />
 
           <Routes>
@@ -30,12 +30,12 @@ export const Application = () => {
               <Route key={idx} path={path} element={element} />
             ))}
           </Routes>
-        </Container>
-      </Container>
+        </FlexContainer>
+      </FlexContainer>
 
-      <Container flex>
+      <FlexContainer>
         <Footer />
-      </Container>
+      </FlexContainer>
     </>
   );
 };

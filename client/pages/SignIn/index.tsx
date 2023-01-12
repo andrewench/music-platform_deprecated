@@ -4,7 +4,7 @@ import React, { useEffect, useLayoutEffect, useState } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import SimpleBar from 'simplebar-react';
 
-import { Container } from '@/components/global';
+import { FlexContainer } from '@/components/global';
 
 import { SignInForm } from '@/components/layout';
 
@@ -58,20 +58,20 @@ export const SignIn = () => {
   }, [searchParams, setSearchParams]);
 
   return (
-    <Container flex className={styles.box}>
+    <FlexContainer className={styles.box}>
       <div className={cn(styles.preview, styles.block)} />
 
       <SimpleBar className={styles.scroll}>
-        <Container flex center className={cn(styles.authForm, styles.block)}>
-          <Container flex column className={styles.formBox}>
+        <FlexContainer center className={cn(styles.authForm, styles.block)}>
+          <FlexContainer column className={styles.formBox}>
             <h1 className={styles.heading} data-version={AppVersion}>
               Music Platform
             </h1>
 
             <SignInForm step={authStep} />
-          </Container>
-        </Container>
+          </FlexContainer>
+        </FlexContainer>
       </SimpleBar>
-    </Container>
+    </FlexContainer>
   );
 };

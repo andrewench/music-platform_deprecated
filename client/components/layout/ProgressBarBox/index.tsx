@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Container } from '@/components/global';
+import { FlexContainer } from '@/components/global';
 
 import { ProgressBar } from '@/components/ui';
 
@@ -18,8 +18,7 @@ export const ProgressBarBox = ({
   maxWidth,
 }: IProgressBarOptions) => {
   return (
-    <Container
-      flex
+    <FlexContainer
       align={FlexAlignOnMainAxis.CENTER}
       content={FlexAlignOnCrossAxis.CENTER}
       gap={ContainerGap.MEDIUM}
@@ -27,6 +26,6 @@ export const ProgressBarBox = ({
       <p className={styles.time}>2:32</p>
       <ProgressBar currentProgress={currentProgress} maxWidth={maxWidth} />
       <p className={styles.time}>3:39</p>
-    </Container>
+    </FlexContainer>
   );
 };

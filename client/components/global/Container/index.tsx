@@ -11,7 +11,6 @@ import {
 import styles from './Container.module.scss';
 
 interface IContainer {
-  flex: boolean;
   column?: boolean;
   center?: boolean;
   grid?: boolean;
@@ -22,8 +21,7 @@ interface IContainer {
   children: ReactNode;
 }
 
-export const Container: FC<IContainer> = ({
-  flex,
+export const FlexContainer: FC<IContainer> = ({
   column,
   center,
   grid,
@@ -35,8 +33,7 @@ export const Container: FC<IContainer> = ({
 }) => {
   return (
     <div
-      className={cn(className, {
-        [styles.flexContainer]: flex,
+      className={cn(className, styles.flexContainer, {
         [styles.flexCol]: column,
         [styles.flexFullCenter]: center,
         [styles.grid]: grid,

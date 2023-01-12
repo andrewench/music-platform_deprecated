@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import { Container } from '@/components/global';
+import { FlexContainer } from '@/components/global';
 
 import { IPlaylistData } from '@/types';
 
@@ -14,7 +14,7 @@ export const PlaylistItem = ({
   newStatus,
 }: IPlaylistData) => {
   return (
-    <Container flex column className={styles.box}>
+    <FlexContainer column className={styles.box}>
       <Link to={href} className={styles.cover}>
         {newStatus && <span className={styles.newLabel}>New</span>}
         <img
@@ -26,6 +26,6 @@ export const PlaylistItem = ({
       </Link>
 
       <p className={styles.title}>{title}</p>
-    </Container>
+    </FlexContainer>
   );
 };

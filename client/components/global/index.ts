@@ -1,2 +1,2 @@
-export { Container } from './Container';
+export { FlexContainer } from './Container';
 export { ViewContainer } from './ViewContainer';

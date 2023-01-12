@@ -3,7 +3,7 @@ import isElectron from 'is-electron';
 
 import React from 'react';
 
-import { Container } from '@/components/global';
+import { FlexContainer } from '@/components/global';
 
 import {
   AudioPlayer,
@@ -17,8 +17,7 @@ import styles from './Footer.module.scss';
 
 export const Footer = () => {
   return (
-    <Container
-      flex
+    <FlexContainer
       content={FlexAlignOnCrossAxis.BETWEEN}
       className={cn(styles.box, {
         [styles.rounded]: isElectron(),
@@ -27,6 +26,6 @@ export const Footer = () => {
       <ShowcaseListeners />
       <AudioPlayer />
       <VolumeIndicator />
-    </Container>
+    </FlexContainer>
   );
 };

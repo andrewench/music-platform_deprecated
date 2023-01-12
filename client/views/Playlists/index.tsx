@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { Container, ViewContainer } from '@/components/global';
+import { FlexContainer, ViewContainer } from '@/components/global';
 
 import { SectionBox } from '@/components/ui';
 
@@ -14,7 +14,7 @@ export const Playlists = () => {
 
   return (
     <ViewContainer>
-      <Container flex column gap={ContainerGap.MEDIUM_LARGE}>
+      <FlexContainer column gap={ContainerGap.MEDIUM_LARGE}>
         {SectionTitleList.map(({ label, labelLink, href }, idx) => (
           <SectionBox
             title={{ label: t(label), labelLink: t(labelLink), href }}
@@ -22,7 +22,7 @@ export const Playlists = () => {
             key={idx}
           />
         ))}
-      </Container>
+      </FlexContainer>
     </ViewContainer>
   );
 };

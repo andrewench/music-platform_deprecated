@@ -1,7 +1,7 @@
 import React from 'react';
 import { IoVolumeMediumOutline } from 'react-icons/io5';
 
-import { Container } from '@/components/global';
+import { FlexContainer } from '@/components/global';
 
 import { ProgressBar } from '@/components/ui';
 
@@ -15,8 +15,7 @@ import styles from './VolumeIndicator.module.scss';
 
 export const VolumeIndicator = () => {
   return (
-    <Container
-      flex
+    <FlexContainer
       align={FlexAlignOnMainAxis.CENTER}
       content={FlexAlignOnCrossAxis.END}
       gap={ContainerGap.SMALL}
@@ -24,6 +23,6 @@ export const VolumeIndicator = () => {
     >
       <IoVolumeMediumOutline className={styles.icon} size={28} />
       <ProgressBar currentProgress={70} maxWidth={100} />
-    </Container>
+    </FlexContainer>
   );
 };

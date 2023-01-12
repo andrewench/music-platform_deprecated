@@ -2,7 +2,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { useLocation } from 'react-router-dom';
 
-import { Container } from '@/components/global';
+import { FlexContainer } from '@/components/global';
 
 import { HeaderLink } from '@/components/ui';
 
@@ -18,8 +18,7 @@ export const Header = () => {
 
   return (
     <header className={styles.box}>
-      <Container
-        flex
+      <FlexContainer
         align={FlexAlignOnMainAxis.CENTER}
         className={styles.content}
       >
@@ -31,7 +30,7 @@ export const Header = () => {
             key={idx}
           />
         ))}
-      </Container>
+      </FlexContainer>
     </header>
   );
 };

@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { Link } from 'react-router-dom';
 
-import { Container } from '@/components/global';
+import { FlexContainer } from '@/components/global';
 
 import { ContainerGap, FlexAlignOnCrossAxis } from '@/types';
 
@@ -17,8 +17,7 @@ interface IFormSign {
 
 export const FormSign: FC<IFormSign> = ({ label, link }) => {
   return (
-    <Container
-      flex
+    <FlexContainer
       gap={ContainerGap.EXTRASMALL}
       content={FlexAlignOnCrossAxis.CENTER}
       className={styles.label}
@@ -27,6 +26,6 @@ export const FormSign: FC<IFormSign> = ({ label, link }) => {
       <Link to={link.href} className={styles.link}>
         {link.label}
       </Link>
-    </Container>
+    </FlexContainer>
   );
 };

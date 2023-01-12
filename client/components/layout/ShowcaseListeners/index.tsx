@@ -4,7 +4,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 
-import { Container } from '@/components/global';
+import { FlexContainer } from '@/components/global';
 
 import { ShowcaseListenersList } from '@/data';
 
@@ -16,7 +16,7 @@ export const ShowcaseListeners = () => {
   return (
     <div className={styles.box}>
       <p className={styles.label}>{t('common.listeningNow')}:</p>
-      <Container flex>
+      <FlexContainer>
         {ShowcaseListenersList.map(({ href, cover, played }, idx) => (
           <Link
             to={href}
@@ -34,7 +34,7 @@ export const ShowcaseListeners = () => {
             />
           </Link>
         ))}
-      </Container>
+      </FlexContainer>
     </div>
   );
 };

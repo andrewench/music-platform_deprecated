@@ -8,6 +8,8 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "prepare": "husky install",
+
     "client:dev": "vite",
     "client:build": "tsc && vite build",
     "client:preview": "vite preview",

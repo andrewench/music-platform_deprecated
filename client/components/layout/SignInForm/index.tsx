@@ -43,30 +43,32 @@ export const SignInForm = ({ step }: { step: SignInFormSteps }) => {
   return (
     <>
       <form onSubmit={handleSubmit(submitHandler)} className={styles.form}>
-        {SignInFields.map(({ type, label, field, query: { act } }, idx) => {
-          const query = searchParams.get('act') as SignInQueryType;
+        {SignInFields.map(
+          ({ label, stateField, query: { act }, ...props }, idx) => {
+            const query = searchParams.get('act') as SignInQueryType;
 
-          return (
-            act.includes(query) && (
-              <InputBox
-                type={type}
-                label={t(label)}
-                field={field}
-                register={register}
-                onChange={(e: ChangeEvent<HTMLInputElement>) =>
-                  dispatch(
-                    setUserField({
-                      key: field,
-                      value: e.target.value,
-                    })
-                  )
-                }
-                key={idx}
-                required
-              />
-            )
-          );
-        })}
+            return (
+              act.includes(query) && (
+                <InputBox
+                  label={t(label)}
+                  stateField={stateField}
+                  register={register}
+                  onChange={(e: ChangeEvent<HTMLInputElement>) =>
+                    dispatch(
+                      setUserField({
+                        key: stateField,
+                        value: e.target.value,
+                      })
+                    )
+                  }
+                  key={idx}
+                  required
+                  {...props}
+                />
+              )
+            );
+          }
+        )}
 
         <SignInFormSubmit step={step} />
       </form>

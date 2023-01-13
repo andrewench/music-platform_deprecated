@@ -8,14 +8,14 @@ interface ISignInFields {
   query: {
     act: SignInQueryType[];
   };
-  field: Path<ISignInFormFields>;
+  stateField: Path<ISignInFormFields>;
 }
 
 export const SignInFields: ISignInFields[] = [
   {
     type: 'text',
     label: 'login.fields.firstname',
-    field: 'firstname',
+    stateField: 'firstname',
     query: {
       act: ['join'],
     },
@@ -23,7 +23,7 @@ export const SignInFields: ISignInFields[] = [
   {
     type: 'text',
     label: 'login.fields.lastname',
-    field: 'lastname',
+    stateField: 'lastname',
     query: {
       act: ['join'],
     },
@@ -31,7 +31,7 @@ export const SignInFields: ISignInFields[] = [
   {
     type: 'text',
     label: 'login.fields.login',
-    field: 'login',
+    stateField: 'login',
     query: {
       act: ['login', 'join'],
     },
@@ -39,7 +39,7 @@ export const SignInFields: ISignInFields[] = [
   {
     type: 'text',
     label: 'login.fields.email',
-    field: 'email',
+    stateField: 'email',
     query: {
       act: ['join', 'restore'],
     },
@@ -47,7 +47,7 @@ export const SignInFields: ISignInFields[] = [
   {
     type: 'password',
     label: 'login.fields.password',
-    field: 'password',
+    stateField: 'password',
     query: {
       act: ['login', 'join'],
     },
@@ -55,7 +55,7 @@ export const SignInFields: ISignInFields[] = [
   {
     type: 'password',
     label: 'login.fields.confirm',
-    field: 'confirm',
+    stateField: 'confirm',
     query: {
       act: ['join'],
     },

@@ -7,7 +7,7 @@ import styles from './InputBox.module.scss';
 
 interface IInputBox {
   label: string;
-  field: Path<ISignInFormFields>;
+  stateField: Path<ISignInFormFields>;
   type: InputType;
   register: UseFormRegister<ISignInFormFields>;
   required: boolean;
@@ -16,7 +16,7 @@ interface IInputBox {
 
 export const InputBox: FC<IInputBox> = ({
   label,
-  field,
+  stateField,
   type,
   register,
   required,
@@ -27,7 +27,7 @@ export const InputBox: FC<IInputBox> = ({
       <input
         className={styles.input}
         type={type}
-        {...register(field, { required })}
+        {...register(stateField, { required })}
         required
         onChange={onChange}
       />

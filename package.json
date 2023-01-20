@@ -9,17 +9,13 @@
   "type": "module",
   "scripts": {
     "prepare": "husky install",
-
     "client:dev": "vite",
     "client:build": "tsc && vite build",
     "client:preview": "vite preview",
-
     "client:lint": "eslint ./client --color",
     "client:lint-fix": "eslint ./client --fix --color",
-
     "server:dev": "cd server && yarn run server:dev",
     "server:lint": "cd server && yarn run server:lint",
-
     "db:preview": "cd server && yarn run db:preview"
   },
   "dependencies": {
@@ -62,6 +58,7 @@
     "lint-staged": "^13.1.0",
     "prettier": "^2.8.1",
     "typescript": "^4.9.3",
+    "typescript-plugin-css-modules": "^4.1.1",
     "vite": "^4.0.0"
   },
   "husky": {

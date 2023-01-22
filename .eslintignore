@@ -4,4 +4,4 @@
 build
 server
 launcher
-vite.config.ts
+*.config.ts

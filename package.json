@@ -14,6 +14,7 @@
     "client:preview": "vite preview",
     "client:lint": "eslint ./client --color",
     "client:lint-fix": "eslint ./client --fix --color",
+    "client:test": "jest",
     "server:dev": "cd server && yarn run server:dev",
     "server:lint": "cd server && yarn run server:lint",
     "db:preview": "cd server && yarn run db:preview"
@@ -37,7 +38,11 @@
     "vite-tsconfig-paths": "^4.0.3"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^14.4.3",
     "@trivago/prettier-plugin-sort-imports": "^4.0.0",
+    "@types/jest": "^29.2.6",
     "@types/react": "^18.0.26",
     "@types/react-dom": "^18.0.9",
     "@typescript-eslint/eslint-plugin": "^5.47.0",
@@ -55,8 +60,13 @@
     "eslint-plugin-react": "^7.31.11",
     "eslint-plugin-react-hooks": "^4.6.0",
     "husky": "^8.0.2",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^29.3.1",
+    "jest-environment-jsdom": "^29.3.1",
     "lint-staged": "^13.1.0",
     "prettier": "^2.8.1",
+    "ts-jest": "^29.0.5",
+    "ts-node": "^10.9.1",
     "typescript": "^4.9.3",
     "typescript-plugin-css-modules": "^4.1.1",
     "vite": "^4.0.0"

@@ -26,6 +26,8 @@
     "^@/slices$",
     "^@/api$",
     "^@/middlewares$",
+    "^@/schemes$",
+    "^@/patterns$",
     "^(.*.package.json)$",
     "^(./App)$",
     "^(./styles/*)",

@@ -40,5 +40,13 @@
       "accountExists": "Already has an account?",
       "forgotPassword": "Forgot your password?"
     }
+  },
+  "formErrors": {
+    "firstname": "The field must contain only letters",
+    "lastname": "The field must contain only letters",
+    "login": "The login field is incorrect",
+    "email": "The email field is not valid",
+    "password": "The password must contain special characters: #?!@$%^&* - and it have a length of at least 8 characters",
+    "confirm": "The password must contain special characters: #?!@$%^&* - and it have a length of at least 8 characters"
   }
 }

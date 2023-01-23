@@ -1,0 +1,78 @@
+@import '../../../styles/variables';
+
+@mixin activeState($color) {
+  border: 1px solid transparent;
+  outline: 2px solid $color;
+}
+
+@mixin activeStateOfLabel($color) {
+  top: -12px;
+  border-radius: 4px;
+  padding: 4px 10px;
+  font-size: 0.875rem;
+  color: #fff;
+  background-color: $color;
+}
+
+$PADDING_X: 20px;
+
+.box {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.input {
+  display: block;
+  width: 100%;
+  padding: 12px #{$PADDING_X};
+  border: 1px solid #d1d1d1;
+  border-radius: 10px;
+  font-size: 1rem;
+  color: $BOLD_TEXT;
+  background-color: $SECTION_BOX_BG;
+
+  &:focus:not(.error) {
+    @include activeState($ACCENT_COLOR);
+  }
+
+  &.error {
+    outline: 2px solid transparent;
+
+    & ~ .label {
+      @include activeStateOfLabel($RED_COLOR);
+    }
+  }
+
+  &:focus:not(.error) ~ .label {
+    @include activeStateOfLabel($ACCENT_COLOR);
+  }
+
+  &.error {
+    @include activeState($RED_COLOR);
+  }
+}
+
+.filled {
+  @include activeState($ACCENT_COLOR);
+
+  & ~ .label {
+    @include activeStateOfLabel($ACCENT_COLOR);
+  }
+}
+
+.label {
+  position: absolute;
+  top: 14px;
+  left: $PADDING_X;
+  font-size: 1rem;
+  pointer-events: none;
+  transition: 0.2s top;
+  color: $LIGHT_TEXT;
+}
+
+.helper {
+  display: block;
+  margin-top: 10px;
+  font-size: 0.875rem;
+  color: $RED_COLOR;
+}

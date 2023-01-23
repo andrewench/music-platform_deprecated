@@ -32,8 +32,11 @@
       "@/slices": ["./slices"],
       "@/hooks": ["./hooks"],
       "@/reducers": ["./reducers"],
-      "@/api": ["./api"]
+      "@/api": ["./api"],
+      "@/schemes": ["./schemes"],
+      "@/patterns": ["./patterns"]
     },
+    
     "plugins": [
       {
         "name": "typescript-plugin-css-modules"
@@ -43,3 +46,4 @@
   "include": ["client"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
+

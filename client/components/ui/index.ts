@@ -4,6 +4,6 @@ export { SectionTitle } from './SectionTitle';
 export { PlaylistItem } from './PlaylistItem';
 export { SectionBox } from './SectionBox';
 export { ProgressBar } from './ProgressBar';
-export { InputBox } from './InputBox';
+export { TextField } from './TextField';
 export { PrimaryButton } from './PrimaryButton';
 export { FormSign } from './FormSign';

@@ -1,6 +1,6 @@
 import { Path } from 'react-hook-form';
 
-import { ISignInFormFields, InputType, SignInQueryType } from '@/types';
+import { InputType, SignInQueryType, TSignUpFields } from '@/types';
 
 interface ISignInFields {
   type: InputType;
@@ -8,14 +8,14 @@ interface ISignInFields {
   query: {
     act: SignInQueryType[];
   };
-  stateField: Path<ISignInFormFields>;
+  stateField: Path<TSignUpFields>;
 }
 
 export const SignInFields: ISignInFields[] = [
   {
     type: 'text',
     label: 'login.fields.firstname',
-    stateField: 'firstname',
+    stateField: 'firstName',
     query: {
       act: ['join'],
     },
@@ -23,7 +23,7 @@ export const SignInFields: ISignInFields[] = [
   {
     type: 'text',
     label: 'login.fields.lastname',
-    stateField: 'lastname',
+    stateField: 'lastName',
     query: {
       act: ['join'],
     },

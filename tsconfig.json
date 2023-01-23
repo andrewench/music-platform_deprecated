@@ -33,6 +33,8 @@
       "@/hooks": ["./hooks"],
       "@/reducers": ["./reducers"],
       "@/api": ["./api"],
+      "@/schemes": ["./schemes"],
+      "@/patterns": ["./patterns"]
     }
   },
   "include": ["client"],

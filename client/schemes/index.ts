@@ -1,0 +1,1 @@
+export { SignUpFieldsSchema } from './SignUpFieldsSchema';

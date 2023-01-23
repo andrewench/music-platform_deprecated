@@ -1,32 +1,43 @@
-import React, { ChangeEvent } from 'react';
-import { SubmitHandler, useForm } from 'react-hook-form';
+import { yupResolver } from '@hookform/resolvers/yup';
+
+import React from 'react';
+import { FormProvider, SubmitHandler, useForm } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 import { useSearchParams } from 'react-router-dom';
 
 import { SignInFormSigns, SignInFormSubmit } from '@/components/layout';
 
-import { InputBox } from '@/components/ui';
+import { TextField } from '@/components/ui';
 
-import { ISignInFormFields, SignInFormSteps, SignInQueryType } from '@/types';
+import { SignInFormSteps, SignInQueryType, TSignUpFields } from '@/types';
 
 import { isAllFieldsFilled } from '@/utils';
 
 import { SignInFields } from '@/data';
 
-import { useAppDispatch } from '@/hooks';
-
-import { setUserField } from '@/slices';
+import { SignUpFieldsSchema } from '@/schemes';
 
 import styles from './SignInForm.module.scss';
 
 export const SignInForm = ({ step }: { step: SignInFormSteps }) => {
-  const { register, handleSubmit, reset } = useForm<ISignInFormFields>();
   const [searchParams] = useSearchParams();
-  const dispatch = useAppDispatch();
   const { t } = useTranslation();
 
-  const submitHandler: SubmitHandler<ISignInFormFields> = async (
-    data: Omit<ISignInFormFields, 'confirm'>
+  const methods = useForm<TSignUpFields>({
+    defaultValues: {
+      firstName: '',
+      lastName: '',
+      login: '',
+      email: '',
+      password: '',
+      confirm: '',
+    },
+    mode: 'onChange',
+    resolver: yupResolver(SignUpFieldsSchema),
+  });
+
+  const submitHandler: SubmitHandler<TSignUpFields> = async (
+    data: TSignUpFields
   ) => {
     switch (step) {
       case 1:
@@ -34,46 +45,39 @@ export const SignInForm = ({ step }: { step: SignInFormSteps }) => {
           // eslint-disable-next-line no-console
           console.log(data);
 
-          reset();
+          methods.reset();
+          methods.clearErrors();
         }
         break;
     }
   };
 
   return (
-    <>
-      <form onSubmit={handleSubmit(submitHandler)} className={styles.form}>
-        {SignInFields.map(
-          ({ label, stateField, query: { act }, ...props }, idx) => {
-            const query = searchParams.get('act') as SignInQueryType;
+    <FormProvider {...methods}>
+      <form
+        noValidate
+        onSubmit={methods.handleSubmit(submitHandler)}
+        className={styles.form}
+      >
+        {SignInFields.map(({ label, query: { act }, ...props }, idx) => {
+          const query = searchParams.get('act') as SignInQueryType;
 
-            return (
-              act.includes(query) && (
-                <InputBox
-                  label={t(label)}
-                  stateField={stateField}
-                  register={register}
-                  onChange={(e: ChangeEvent<HTMLInputElement>) =>
-                    dispatch(
-                      setUserField({
-                        key: stateField,
-                        value: e.target.value,
-                      })
-                    )
-                  }
-                  key={idx}
-                  required
-                  {...props}
-                />
-              )
-            );
-          }
-        )}
+          return (
+            act.includes(query) && (
+              <TextField
+                label={t(label)}
+                register={methods.register}
+                key={idx}
+                {...props}
+              />
+            )
+          );
+        })}
 
         <SignInFormSubmit step={step} />
       </form>
 
       <SignInFormSigns step={step} />
-    </>
+    </FormProvider>
   );
 };

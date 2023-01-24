@@ -1,12 +1,12 @@
 import { Path } from 'react-hook-form';
 
-import { InputType, SignInQueryType, TSignUpFields } from '@/types';
+import { TInputRole, TSignInQuery, TSignUpFields } from '@/types';
 
 interface ISignInFields {
-  type: InputType;
+  type: TInputRole;
   label: string;
   query: {
-    act: SignInQueryType[];
+    act: TSignInQuery[];
   };
   stateField: Path<TSignUpFields>;
 }

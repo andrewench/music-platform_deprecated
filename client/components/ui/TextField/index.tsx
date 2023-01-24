@@ -4,7 +4,7 @@ import React, { FC } from 'react';
 import { Path, UseFormRegister, useFormContext } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 
-import { InputType, TSignUpFields } from '@/types';
+import { TInputRole, TSignUpFields } from '@/types';
 
 import styles from './TextField.module.scss';
 
@@ -12,7 +12,7 @@ interface ITextField {
   label: string;
   stateField: Path<TSignUpFields>;
   register: UseFormRegister<TSignUpFields>;
-  type: InputType;
+  type: TInputRole;
 }
 
 export const TextField: FC<ITextField> = ({

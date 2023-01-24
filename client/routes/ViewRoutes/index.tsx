@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react';
 
-import { ViewRoutesPaths } from '@/types';
+import { TViewEndpoints } from '@/types';
 
 import {
   Account,
@@ -16,7 +16,7 @@ import {
 } from '@/views';
 
 interface IViewRoutes {
-  path: ViewRoutesPaths;
+  path: TViewEndpoints;
   element: ReactNode;
 }
 

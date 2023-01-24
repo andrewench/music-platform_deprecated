@@ -1,2 +1,2 @@
-export type { RoutesType } from './RoutesType';
-export type { UserModelInstanceType } from './UserModelInstanceType';
+export type { TApiMainEndpoint, TApiEndpoints, TApiRoutes } from './AppRoutes';
+export type { TUserModelInstance } from './UserModelInstance';

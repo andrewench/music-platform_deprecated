@@ -2,17 +2,17 @@ import { Request, Response, Router } from 'express';
 import { StatusCodes } from 'http-status-codes';
 import jwt from 'jsonwebtoken';
 
-import { RoutesType, UserModelInstanceType } from '@/types';
+import { TApiRoutes, TUserModelInstance } from '@/types';
 
 import { CryptoService, DatabaseService } from '@/services';
 
 export const joinRoute = Router();
 
 joinRoute
-  .route<RoutesType>('/api/join')
+  .route<TApiRoutes>('/api/join')
   .put(
     async (
-      { body }: Request<never, never, UserModelInstanceType>,
+      { body }: Request<never, never, TUserModelInstance>,
       res: Response
     ) => {
       const { login, email, password } = body;

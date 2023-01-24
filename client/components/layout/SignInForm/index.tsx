@@ -9,7 +9,7 @@ import { SignInFormSigns, SignInFormSubmit } from '@/components/layout';
 
 import { TextField } from '@/components/ui';
 
-import { SignInFormSteps, SignInQueryType, TSignUpFields } from '@/types';
+import { SignInFormSteps, TSignInQuery, TSignUpFields } from '@/types';
 
 import { isAllFieldsFilled } from '@/utils';
 
@@ -60,7 +60,7 @@ export const SignInForm = ({ step }: { step: SignInFormSteps }) => {
         className={styles.form}
       >
         {SignInFields.map(({ label, query: { act }, ...props }, idx) => {
-          const query = searchParams.get('act') as SignInQueryType;
+          const query = searchParams.get('act') as TSignInQuery;
 
           return (
             act.includes(query) && (

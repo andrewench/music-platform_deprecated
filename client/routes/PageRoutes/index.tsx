@@ -2,10 +2,10 @@ import React, { ReactNode } from 'react';
 
 import { Application, SignIn } from '@/pages';
 
-import { PageRoutesPaths } from '@/types';
+import { TAppEndpoints } from '@/types';
 
 interface IPageRoutes {
-  path: PageRoutesPaths;
+  path: TAppEndpoints;
   element: ReactNode;
 }
 

@@ -1,16 +1,16 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-import { ISignInFormFields } from '@/types';
+import { TSignUpFields } from '@/types';
 
 import { updateStoreFieldByKey } from '@/reducers';
 
-const initialState: ISignInFormFields = {} as ISignInFormFields;
+const initialState: TSignUpFields = {} as TSignUpFields;
 
 export const userSlice = createSlice({
   name: 'user',
   initialState,
   reducers: {
-    setUserField: updateStoreFieldByKey<ISignInFormFields>,
+    setUserField: updateStoreFieldByKey<TSignUpFields>,
   },
 });
 

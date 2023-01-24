@@ -8,7 +8,7 @@ import { FlexContainer } from '@/components/global';
 
 import { SignInForm } from '@/components/layout';
 
-import { SignInQueryType } from '@/types';
+import { TSignInQuery } from '@/types';
 
 import { RouteService } from '@/services';
 
@@ -22,7 +22,7 @@ export const SignIn = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const actQuery = searchParams.get('act') as SignInQueryType;
+    const actQuery = searchParams.get('act') as TSignInQuery;
 
     const {
       signIn: { redirectTo },
@@ -40,7 +40,7 @@ export const SignIn = () => {
   }, [searchParams, setSearchParams, navigate]);
 
   useLayoutEffect(() => {
-    const actQuery = searchParams.get('act') as SignInQueryType;
+    const actQuery = searchParams.get('act') as TSignInQuery;
 
     switch (actQuery) {
       case 'login':

@@ -1,4 +1,4 @@
-export type ViewRoutesPaths =
+export type TViewEndpoints =
   | '/podcasts'
   | '/playlists'
   | '/artists'

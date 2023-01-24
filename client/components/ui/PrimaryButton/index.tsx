@@ -2,13 +2,13 @@ import cn from 'classnames';
 
 import React, { FC } from 'react';
 
-import { ButtonType } from '@/types';
+import { TButtonRole } from '@/types';
 
 import styles from './PrimaryButton.module.scss';
 
 interface IPrimaryButton {
   label: string;
-  type: ButtonType;
+  type: TButtonRole;
   className?: string;
 }
 

@@ -1,22 +1,24 @@
-import React from 'react';
+import React, { StrictMode } from 'react';
 import ReactDOM from 'react-dom/client';
-import { I18nextProvider as TranslateProvider } from 'react-i18next';
-import { Provider as StoreProvider } from 'react-redux';
 
-import { TranslateService } from '@/services';
+import { TranslateProvider, initTranslateConfig } from '@/services';
 
-import { store } from '@/store';
+import { StoreProvider } from '@/store';
+
+import { DataProvider } from '@/context';
 
 import App from './App';
 
 import './styles/global.scss';
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
-  <React.StrictMode>
-    <StoreProvider store={store}>
-      <TranslateProvider i18n={await TranslateService.init()}>
-        <App />
-      </TranslateProvider>
+  <StrictMode>
+    <StoreProvider>
+      <DataProvider>
+        <TranslateProvider config={await initTranslateConfig()}>
+          <App />
+        </TranslateProvider>
+      </DataProvider>
     </StoreProvider>
-  </React.StrictMode>
+  </StrictMode>
 );

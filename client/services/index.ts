@@ -1,2 +1,2 @@
 export { RouteService } from './RouteService';
-export { TranslateService } from './TranslateService';
+export { TranslateProvider, initTranslateConfig } from './TranslateService';

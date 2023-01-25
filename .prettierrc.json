@@ -28,6 +28,8 @@
     "^@/middlewares$",
     "^@/schemes$",
     "^@/patterns$",
+    "^@/context$",
+    "^@/config",
     "^(.*.package.json)$",
     "^(./App)$",
     "^(./styles/*)",

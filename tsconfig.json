@@ -34,7 +34,9 @@
       "@/reducers": ["./reducers"],
       "@/api": ["./api"],
       "@/schemes": ["./schemes"],
-      "@/patterns": ["./patterns"]
+      "@/patterns": ["./patterns"],
+      "@/context": ["./context"],
+      "@/config": ["./config"]
     },
     
     "plugins": [

@@ -3,7 +3,7 @@ type TAuthFormFields = Readonly<
 >;
 
 export type TSignInFields = Record<
-  Extract<TAuthFormFields, 'login' | 'email'>,
+  Extract<TAuthFormFields, 'email' | 'password'>,
   string
 >;
 export type TSignUpFields = Record<TAuthFormFields, string>;

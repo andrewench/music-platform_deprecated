@@ -6,7 +6,7 @@ import SimpleBar from 'simplebar-react';
 
 import { FlexContainer } from '@/components/global';
 
-import { SignInForm } from '@/components/layout';
+import { AuthForm } from '@/components/layout';
 
 import { TSignInQuery } from '@/types';
 
@@ -68,7 +68,7 @@ export const SignIn = () => {
               Music Platform
             </h1>
 
-            <SignInForm step={authStep} />
+            <AuthForm step={authStep} />
           </FlexContainer>
         </FlexContainer>
       </SimpleBar>

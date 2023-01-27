@@ -7,3 +7,4 @@ export { ProgressBar } from './ProgressBar';
 export { TextField } from './TextField';
 export { PrimaryButton } from './PrimaryButton';
 export { FormSign } from './FormSign';
+export { FormSubmit } from './FormSubmit';

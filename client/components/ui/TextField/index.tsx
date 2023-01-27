@@ -1,26 +1,31 @@
 import cn from 'classnames';
 
-import React, { FC } from 'react';
-import { Path, UseFormRegister, useFormContext } from 'react-hook-form';
+import React from 'react';
+import {
+  FieldValues,
+  Path,
+  UseFormRegister,
+  useFormContext,
+} from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 
-import { TInputRole, TSignUpFields } from '@/types';
+import { TInputRole } from '@/types';
 
 import styles from './TextField.module.scss';
 
-interface ITextField {
+interface ITextField<T extends FieldValues> {
   label: string;
-  stateField: Path<TSignUpFields>;
-  register: UseFormRegister<TSignUpFields>;
+  stateField: Path<T>;
+  register: UseFormRegister<T>;
   type: TInputRole;
 }
 
-export const TextField: FC<ITextField> = ({
+export const TextField = <T extends FieldValues>({
   label,
   stateField,
   type,
   register,
-}) => {
+}: ITextField<T>) => {
   const { t } = useTranslation();
   const {
     watch,

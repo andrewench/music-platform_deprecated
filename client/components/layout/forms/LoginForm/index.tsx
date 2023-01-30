@@ -10,10 +10,14 @@ import type { TSignInFields } from '@/types';
 
 import { isAllFieldsFilled } from '@/utils';
 
+import { useChangeHandlerAction } from '@/hooks';
+
 import { SignInFieldsSchema } from '@/schemes';
 
 export const LoginForm: FC = () => {
   const { t } = useTranslation();
+
+  const changeHandler = useChangeHandlerAction<TSignInFields>();
 
   const methods = useForm<TSignInFields>({
     mode: 'onChange',
@@ -36,16 +40,18 @@ export const LoginForm: FC = () => {
     <FormProvider {...methods}>
       <form noValidate onSubmit={methods.handleSubmit(submitHandler)}>
         <TextField
-          type="text"
+          type="email"
           label={t('login.fields.email')}
           stateField="email"
           register={methods.register}
+          onChange={changeHandler<keyof TSignInFields>('email')}
         />
         <TextField
           type="password"
           label={t('login.fields.password')}
           stateField="password"
           register={methods.register}
+          onChange={changeHandler<keyof TSignInFields>('password')}
         />
 
         <FormSubmit label={t('common.signIn')} />

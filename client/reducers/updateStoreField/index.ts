@@ -1,13 +1,15 @@
 import { Draft, PayloadAction } from '@reduxjs/toolkit';
 
-interface IPayloadProps {
-  key: string;
+import type { TMappedTypes } from '@/types';
+
+interface IPayloadProps<K extends keyof TMappedTypes> {
+  key: K;
   value: string;
 }
 
-export const updateStoreFieldByKey = <T>(
-  state: Draft<T>,
-  { payload: { key, value } }: PayloadAction<IPayloadProps>
+export const updateStoreFieldByKey = <TState extends TMappedTypes>(
+  state: Draft<TState>,
+  { payload: { key, value } }: PayloadAction<IPayloadProps<keyof TState>>
 ) => {
   return {
     ...state,

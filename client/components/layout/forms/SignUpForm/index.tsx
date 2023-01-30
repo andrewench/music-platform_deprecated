@@ -12,10 +12,14 @@ import { isAllFieldsFilled } from '@/utils';
 
 import { SignInFields } from '@/data';
 
+import { useChangeHandlerAction } from '@/hooks';
+
 import { SignUpFieldsSchema } from '@/schemes';
 
 export const SignUpForm: FC = () => {
   const { t } = useTranslation();
+
+  const changeHandler = useChangeHandlerAction<TSignUpFields>();
 
   const methods = useForm<TSignUpFields>({
     mode: 'onChange',
@@ -37,12 +41,14 @@ export const SignUpForm: FC = () => {
   return (
     <FormProvider {...methods}>
       <form noValidate onSubmit={methods.handleSubmit(submitHandler)}>
-        {SignInFields.map(({ label, ...props }, idx) => (
+        {SignInFields.map(({ label, stateField, ...props }, idx) => (
           <TextField
             label={t(label)}
+            stateField={stateField}
             register={methods.register}
             key={idx}
             {...props}
+            onChange={changeHandler<keyof TSignUpFields>(stateField)}
           />
         ))}
 

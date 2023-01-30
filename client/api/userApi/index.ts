@@ -7,8 +7,8 @@ export const userApi = createApi({
   baseQuery: fetchBaseQuery({
     baseUrl: '/api' as TApiMainEndpoint,
   }),
-  endpoints: (build) => ({
-    addNewUser: build.mutation({
+  endpoints: ({ mutation }) => ({
+    addNewUser: mutation({
       query: (payload: TSignUpFields) => ({
         url: '/users' as TApiEndpoints,
         headers: {

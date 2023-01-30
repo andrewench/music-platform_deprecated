@@ -19,3 +19,4 @@ export type { IGlobalContext } from './GlobalContext';
 export type { TLanguageCodesList } from './LanguagesList';
 export type { TContextFields } from './ContextFields';
 export type { IContextActionParams } from './ContextActionParams';
+export type { TMappedTypes } from './MappedTypes';

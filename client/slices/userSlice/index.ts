@@ -10,7 +10,8 @@ export const userSlice = createSlice({
   name: 'user',
   initialState,
   reducers: {
-    setUserField: updateStoreFieldByKey<TSignUpFields>,
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    setUserField: updateStoreFieldByKey<any>,
   },
 });
 

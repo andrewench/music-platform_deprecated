@@ -9,18 +9,23 @@ import styles from './PrimaryButton.module.scss';
 interface IPrimaryButton {
   label: string;
   type: TButtonRole;
+  disabled?: boolean;
   className?: string;
 }
 
 export const PrimaryButton: FC<IPrimaryButton> = ({
   label,
   type,
+  disabled = false,
   className,
 }) => {
   return (
     <button
       type={type === 'submit' ? 'submit' : 'button'}
-      className={cn(styles.button, className)}
+      disabled={disabled}
+      className={cn(styles.button, className, {
+        [styles.disabled]: disabled,
+      })}
     >
       {label}
     </button>

@@ -1,6 +1,6 @@
 import cn from 'classnames';
 
-import React from 'react';
+import React, { HTMLAttributes } from 'react';
 import {
   FieldValues,
   Path,
@@ -13,7 +13,8 @@ import { TInputRole } from '@/types';
 
 import styles from './TextField.module.scss';
 
-interface ITextField<T extends FieldValues> {
+interface ITextField<T extends FieldValues>
+  extends HTMLAttributes<HTMLInputElement> {
   label: string;
   stateField: Path<T>;
   register: UseFormRegister<T>;
@@ -25,6 +26,7 @@ export const TextField = <T extends FieldValues>({
   stateField,
   type,
   register,
+  ...props
 }: ITextField<T>) => {
   const { t } = useTranslation();
   const {
@@ -35,12 +37,13 @@ export const TextField = <T extends FieldValues>({
   return (
     <div className={styles.box}>
       <input
+        type={type}
         className={cn(styles.input, {
           [styles.filled]: Boolean(watch(stateField)),
           [styles.error]: errors[stateField],
         })}
-        type={type}
         {...register(stateField, { required: true })}
+        {...props}
       />
 
       <p className={styles.label}>{label}</p>

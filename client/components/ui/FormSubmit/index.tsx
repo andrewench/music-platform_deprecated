@@ -4,8 +4,18 @@ import { PrimaryButton } from '@/components/ui';
 
 import styles from './FormSubmit.module.scss';
 
-export const FormSubmit: FC<{ label: string }> = ({ label }) => {
+interface IFormSubmit {
+  label: string;
+  disabled?: boolean;
+}
+
+export const FormSubmit: FC<IFormSubmit> = ({ label, disabled = false }) => {
   return (
-    <PrimaryButton type="submit" label={label} className={styles.submit} />
+    <PrimaryButton
+      disabled={disabled}
+      type="submit"
+      label={label}
+      className={styles.submit}
+    />
   );
 };

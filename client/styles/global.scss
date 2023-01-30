@@ -12,8 +12,18 @@
   font-family: 'Inter', sans-serif;
 }
 
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section, img {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+img {
   display: block;
 }
 
@@ -22,12 +32,19 @@ body {
   scroll-behavior: smooth;
 }
 
-ol, ul {
+ol,
+ul {
   list-style: none;
 }
 
 button {
   &:hover {
     cursor: pointer;
+  }
+}
+
+.simplebar-content-wrapper {
+  &:focus {
+    outline: none;
   }
 }

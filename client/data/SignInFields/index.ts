@@ -1,11 +1,13 @@
 import { Path } from 'react-hook-form';
 
-import { TInputRole, TSignUpFields } from '@/types';
+import type { TSharedAllFields } from '@/shared/types';
+
+import type { TInputRole } from '@/types';
 
 interface ISignInFields {
   type: TInputRole;
   label: string;
-  stateField: Path<TSignUpFields>;
+  stateField: Path<TSharedAllFields>;
 }
 
 export const SignInFields: ISignInFields[] = [

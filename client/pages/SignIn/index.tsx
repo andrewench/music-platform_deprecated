@@ -12,7 +12,7 @@ import { TSignInQuery } from '@/types';
 
 import { RouteService } from '@/services';
 
-import { version as AppVersion } from '../../../package.json';
+import { version as AppVersion } from '@/package.json';
 
 import styles from './SignIn.module.scss';
 

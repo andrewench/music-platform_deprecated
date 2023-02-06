@@ -37,9 +37,10 @@
       "@/schemes": ["./schemes"],
       "@/patterns": ["./patterns"],
       "@/context": ["./context"],
-      "@/config": ["./config"]
+      "@/config": ["./config"],
+      "@/shared/types": ["../shared/types"],
+      "@/*": ["../*"]
     },
-    
     "plugins": [
       {
         "name": "typescript-plugin-css-modules"

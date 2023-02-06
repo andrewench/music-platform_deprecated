@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next';
 
 import { FormSubmit, TextField } from '@/components/ui';
 
-import { TSignUpFields } from '@/types';
+import type { TSharedAllFields } from '@/shared/types';
 
 import { isAllFieldsFilled } from '@/utils';
 
@@ -19,14 +19,14 @@ import { SignUpFieldsSchema } from '@/schemes';
 export const SignUpForm: FC = () => {
   const { t } = useTranslation();
 
-  const changeHandler = useChangeHandlerAction<TSignUpFields>();
+  const changeHandler = useChangeHandlerAction<TSharedAllFields>();
 
-  const methods = useForm<TSignUpFields>({
+  const methods = useForm<TSharedAllFields>({
     mode: 'onChange',
     resolver: yupResolver(SignUpFieldsSchema),
   });
 
-  const submitHandler: SubmitHandler<TSignUpFields> = (data) => {
+  const submitHandler: SubmitHandler<TSharedAllFields> = (data) => {
     const { reset, clearErrors } = methods;
 
     if (isAllFieldsFilled(Object.values(data))) {
@@ -48,7 +48,7 @@ export const SignUpForm: FC = () => {
             register={methods.register}
             key={idx}
             {...props}
-            onChange={changeHandler<keyof TSignUpFields>(stateField)}
+            onChange={changeHandler<keyof TSharedAllFields>(stateField)}
           />
         ))}
 

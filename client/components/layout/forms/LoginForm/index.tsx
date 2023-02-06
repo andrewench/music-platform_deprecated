@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next';
 
 import { FormSubmit, TextField } from '@/components/ui';
 
-import type { TSignInFields } from '@/types';
+import type { TSharedSignInFields } from '@/shared/types';
 
 import { isAllFieldsFilled } from '@/utils';
 
@@ -17,14 +17,16 @@ import { SignInFieldsSchema } from '@/schemes';
 export const LoginForm: FC = () => {
   const { t } = useTranslation();
 
-  const changeHandler = useChangeHandlerAction<TSignInFields>();
+  const changeHandler = useChangeHandlerAction<TSharedSignInFields>();
 
-  const methods = useForm<TSignInFields>({
+  const methods = useForm<TSharedSignInFields>({
     mode: 'onChange',
     resolver: yupResolver(SignInFieldsSchema),
   });
 
-  const submitHandler: SubmitHandler<TSignInFields> = (data: TSignInFields) => {
+  const submitHandler: SubmitHandler<TSharedSignInFields> = (
+    data: TSharedSignInFields
+  ) => {
     const { reset, clearErrors } = methods;
 
     if (isAllFieldsFilled(Object.values(data))) {
@@ -44,14 +46,14 @@ export const LoginForm: FC = () => {
           label={t('login.fields.email')}
           stateField="email"
           register={methods.register}
-          onChange={changeHandler<keyof TSignInFields>('email')}
+          onChange={changeHandler<keyof TSharedSignInFields>('email')}
         />
         <TextField
           type="password"
           label={t('login.fields.password')}
           stateField="password"
           register={methods.register}
-          onChange={changeHandler<keyof TSignInFields>('password')}
+          onChange={changeHandler<keyof TSharedSignInFields>('password')}
         />
 
         <FormSubmit label={t('common.signIn')} />

@@ -7,11 +7,6 @@ export type { TAppEndpoints } from './AppEndpoints';
 export type { TViewEndpoints } from './ViewRoutes';
 export type { TInputRole } from './InputRole';
 export type { TButtonRole } from './ButtonRole';
-export type {
-  TSignInFields,
-  TSignUpFields,
-  TSignInRestoreField,
-} from './AuthFormFields';
 export type { TSignInQuery } from './SignInQuery';
 export type { TApiEndpoints, TApiMainEndpoint, TApiRoutes } from './AppRoutes';
 export { SignInFormSteps } from './SignInFormSteps';

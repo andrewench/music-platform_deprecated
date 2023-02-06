@@ -1,10 +1,10 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-import { TSignUpFields } from '@/types';
+import type { TSharedAllFields } from '@/shared/types';
 
 import { updateStoreFieldByKey } from '@/reducers';
 
-const initialState: TSignUpFields = {} as TSignUpFields;
+const initialState = {} as TSharedAllFields;
 
 export const userSlice = createSlice({
   name: 'user',

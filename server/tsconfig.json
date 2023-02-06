@@ -19,7 +19,9 @@
       "@/services": ["./services"],
       "@/types": ["./types"],
       "@/models": ["./models"],
-      "@/middlewares": ["./middlewares"]
+      "@/middlewares": ["./middlewares"],
+      "@/shared/types": ["../../shared/types"],
+      "@/*": ["../../*"]
     }
   },
   "include": ["./src/**/*", "webpack.config.ts"],

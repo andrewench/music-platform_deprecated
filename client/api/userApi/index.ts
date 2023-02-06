@@ -1,6 +1,8 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
-import type { TApiEndpoints, TApiMainEndpoint, TSignUpFields } from '@/types';
+import type { TSharedSignUpFields } from '@/shared/types';
+
+import type { TApiEndpoints, TApiMainEndpoint } from '@/types';
 
 export const userApi = createApi({
   reducerPath: 'userApi',
@@ -9,7 +11,7 @@ export const userApi = createApi({
   }),
   endpoints: ({ mutation }) => ({
     addNewUser: mutation({
-      query: (payload: TSignUpFields) => ({
+      query: (payload: TSharedSignUpFields) => ({
         url: '/users' as TApiEndpoints,
         headers: {
           'Content-Type': 'application/json',

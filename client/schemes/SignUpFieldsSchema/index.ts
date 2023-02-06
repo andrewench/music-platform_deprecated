@@ -1,6 +1,6 @@
 import { SchemaOf, object, string } from 'yup';
 
-import { TSignUpFields } from '@/types';
+import type { TSharedAllFields } from '@/shared/types';
 
 import {
   emailPattern,
@@ -9,7 +9,7 @@ import {
   passwordPattern,
 } from '@/patterns';
 
-export const SignUpFieldsSchema: SchemaOf<TSignUpFields> = object().shape({
+export const SignUpFieldsSchema: SchemaOf<TSharedAllFields> = object().shape({
   firstName: string()
     .matches(namesPattern, {
       message: 'formErrors.firstname',

@@ -2,9 +2,11 @@ import { Request, Response, Router } from 'express';
 import { StatusCodes } from 'http-status-codes';
 import jwt from 'jsonwebtoken';
 
-import { TApiRoutes, TUserModelInstance } from '@/types';
+import type { TApiRoutes } from '@/types';
 
 import { CryptoService, DatabaseService } from '@/services';
+
+import type { TSharedSignUpFields } from '@/shared/types';
 
 export const joinRoute = Router();
 
@@ -12,7 +14,7 @@ joinRoute
   .route<TApiRoutes>('/api/join')
   .put(
     async (
-      { body }: Request<never, never, TUserModelInstance>,
+      { body }: Request<never, never, TSharedSignUpFields>,
       res: Response
     ) => {
       const { login, email, password } = body;

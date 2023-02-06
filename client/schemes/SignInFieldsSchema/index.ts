@@ -1,18 +1,20 @@
 import { SchemaOf, object, string } from 'yup';
 
-import { TSignInFields } from '@/types';
+import type { TSharedSignInFields } from '@/shared/types';
 
 import { emailPattern, passwordPattern } from '@/patterns';
 
-export const SignInFieldsSchema: SchemaOf<TSignInFields> = object().shape({
-  email: string()
-    .matches(emailPattern, {
-      message: 'formErrors.email',
-    })
-    .required(),
-  password: string()
-    .matches(passwordPattern, {
-      message: 'formErrors.password',
-    })
-    .required(),
-});
+export const SignInFieldsSchema: SchemaOf<TSharedSignInFields> = object().shape(
+  {
+    email: string()
+      .matches(emailPattern, {
+        message: 'formErrors.email',
+      })
+      .required(),
+    password: string()
+      .matches(passwordPattern, {
+        message: 'formErrors.password',
+      })
+      .required(),
+  }
+);

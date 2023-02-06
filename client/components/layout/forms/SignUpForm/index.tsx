@@ -8,18 +8,12 @@ import { FormSubmit, TextField } from '@/components/ui';
 
 import type { TSharedAllFields } from '@/shared/types';
 
-import { isAllFieldsFilled } from '@/utils';
-
-import { SignInFields } from '@/data';
-
-import { useChangeHandlerAction } from '@/hooks';
+import { SignUpFields } from '@/data';
 
 import { SignUpFieldsSchema } from '@/schemes';
 
 export const SignUpForm: FC = () => {
   const { t } = useTranslation();
-
-  const changeHandler = useChangeHandlerAction<TSharedAllFields>();
 
   const methods = useForm<TSharedAllFields>({
     mode: 'onChange',
@@ -29,26 +23,23 @@ export const SignUpForm: FC = () => {
   const submitHandler: SubmitHandler<TSharedAllFields> = (data) => {
     const { reset, clearErrors } = methods;
 
-    if (isAllFieldsFilled(Object.values(data))) {
-      // eslint-disable-next-line no-console
-      console.log(data);
+    // eslint-disable-next-line no-console
+    console.log(data);
 
-      reset();
-      clearErrors();
-    }
+    reset();
+    clearErrors();
   };
 
   return (
     <FormProvider {...methods}>
       <form noValidate onSubmit={methods.handleSubmit(submitHandler)}>
-        {SignInFields.map(({ label, stateField, ...props }, idx) => (
+        {SignUpFields.map(({ label, stateField, ...props }, idx) => (
           <TextField
             label={t(label)}
             stateField={stateField}
             register={methods.register}
             key={idx}
             {...props}
-            onChange={changeHandler<keyof TSharedAllFields>(stateField)}
           />
         ))}
 

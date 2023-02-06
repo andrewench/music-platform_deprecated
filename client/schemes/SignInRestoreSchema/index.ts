@@ -1,10 +1,10 @@
 import { SchemaOf, object, string } from 'yup';
 
-import { TSignInRestoreField } from '@/types';
+import type { TSharedSignInRestoreField } from '@/shared/types';
 
 import { emailPattern } from '@/patterns';
 
-export const SignInRestoreSchema: SchemaOf<TSignInRestoreField> =
+export const SignInRestoreSchema: SchemaOf<TSharedSignInRestoreField> =
   object().shape({
     email: string()
       .matches(emailPattern, {

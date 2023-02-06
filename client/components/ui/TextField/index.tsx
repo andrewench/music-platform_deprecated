@@ -6,6 +6,7 @@ import {
   Path,
   UseFormRegister,
   useFormContext,
+  useWatch,
 } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 
@@ -26,24 +27,26 @@ export const TextField = <T extends FieldValues>({
   stateField,
   type,
   register,
-  ...props
 }: ITextField<T>) => {
   const { t } = useTranslation();
   const {
-    watch,
     formState: { errors },
-  } = useFormContext();
+  } = useFormContext<T>();
+
+  const fieldValue = useWatch({
+    name: stateField,
+  });
 
   return (
     <div className={styles.box}>
       <input
         type={type}
+        autoComplete="off"
         className={cn(styles.input, {
-          [styles.filled]: Boolean(watch(stateField)),
+          [styles.filled]: Boolean(fieldValue),
           [styles.error]: errors[stateField],
         })}
         {...register(stateField, { required: true })}
-        {...props}
       />
 
       <p className={styles.label}>{label}</p>

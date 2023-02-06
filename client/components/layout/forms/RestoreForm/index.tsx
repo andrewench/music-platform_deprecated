@@ -6,25 +6,21 @@ import { useTranslation } from 'react-i18next';
 
 import { FormSubmit, TextField } from '@/components/ui';
 
-import type { TSignInRestoreField } from '@/types';
+import type { TSharedSignInRestoreField } from '@/shared/types';
 
 import { isAllFieldsFilled } from '@/utils';
-
-import { useChangeHandlerAction } from '@/hooks';
 
 import { SignInRestoreSchema } from '@/schemes';
 
 export const RestoreForm: FC = () => {
   const { t } = useTranslation();
 
-  const changeHandler = useChangeHandlerAction<TSignInRestoreField>();
-
-  const methods = useForm<TSignInRestoreField>({
+  const methods = useForm<TSharedSignInRestoreField>({
     mode: 'onChange',
     resolver: yupResolver(SignInRestoreSchema),
   });
 
-  const submitHandler: SubmitHandler<TSignInRestoreField> = (data) => {
+  const submitHandler: SubmitHandler<TSharedSignInRestoreField> = (data) => {
     const { reset, clearErrors } = methods;
 
     if (isAllFieldsFilled(Object.values(data))) {
@@ -44,7 +40,6 @@ export const RestoreForm: FC = () => {
           label={t('login.fields.email')}
           stateField="email"
           register={methods.register}
-          onChange={changeHandler<keyof TSignInRestoreField>('email')}
         />
 
         <FormSubmit label={t('common.sendCode')} />

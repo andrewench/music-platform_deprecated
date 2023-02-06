@@ -10,14 +10,10 @@ import type { TSharedSignInFields } from '@/shared/types';
 
 import { isAllFieldsFilled } from '@/utils';
 
-import { useChangeHandlerAction } from '@/hooks';
-
 import { SignInFieldsSchema } from '@/schemes';
 
 export const LoginForm: FC = () => {
   const { t } = useTranslation();
-
-  const changeHandler = useChangeHandlerAction<TSharedSignInFields>();
 
   const methods = useForm<TSharedSignInFields>({
     mode: 'onChange',
@@ -46,14 +42,12 @@ export const LoginForm: FC = () => {
           label={t('login.fields.email')}
           stateField="email"
           register={methods.register}
-          onChange={changeHandler<keyof TSharedSignInFields>('email')}
         />
         <TextField
           type="password"
           label={t('login.fields.password')}
           stateField="password"
           register={methods.register}
-          onChange={changeHandler<keyof TSharedSignInFields>('password')}
         />
 
         <FormSubmit label={t('common.signIn')} />

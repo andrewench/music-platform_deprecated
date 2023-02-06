@@ -10,14 +10,10 @@ import type { TSignInRestoreField } from '@/types';
 
 import { isAllFieldsFilled } from '@/utils';
 
-import { useChangeHandlerAction } from '@/hooks';
-
 import { SignInRestoreSchema } from '@/schemes';
 
 export const RestoreForm: FC = () => {
   const { t } = useTranslation();
-
-  const changeHandler = useChangeHandlerAction<TSignInRestoreField>();
 
   const methods = useForm<TSignInRestoreField>({
     mode: 'onChange',
@@ -44,7 +40,6 @@ export const RestoreForm: FC = () => {
           label={t('login.fields.email')}
           stateField="email"
           register={methods.register}
-          onChange={changeHandler<keyof TSignInRestoreField>('email')}
         />
 
         <FormSubmit label={t('common.sendCode')} />

@@ -1,6 +1,6 @@
 import { yupResolver } from '@hookform/resolvers/yup';
 
-import React, { FC } from 'react';
+import { FC } from 'react';
 import { FormProvider, SubmitHandler, useForm } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 

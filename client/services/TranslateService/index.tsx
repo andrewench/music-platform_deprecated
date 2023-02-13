@@ -1,6 +1,6 @@
 import i18next, { i18n } from 'i18next';
 
-import React, { FC, ReactNode } from 'react';
+import { FC, ReactNode } from 'react';
 import { I18nextProvider, initReactI18next } from 'react-i18next';
 
 import { en, zh } from '@/languages';

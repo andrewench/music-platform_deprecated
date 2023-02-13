@@ -1,6 +1,6 @@
 import cn from 'classnames';
 
-import React, { useEffect, useLayoutEffect, useState } from 'react';
+import { useEffect, useLayoutEffect, useState } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import SimpleBar from 'simplebar-react';
 

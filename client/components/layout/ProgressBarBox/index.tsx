@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { FlexContainer } from '@/components/global';
 
 import { ProgressBar } from '@/components/ui';

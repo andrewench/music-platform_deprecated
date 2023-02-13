@@ -1,6 +1,6 @@
 import cn from 'classnames';
 
-import React, { HTMLAttributes } from 'react';
+import { HTMLAttributes } from 'react';
 import {
   FieldValues,
   Path,

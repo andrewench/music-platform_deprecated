@@ -1,4 +1,3 @@
-import React from 'react';
 import { IoVolumeMediumOutline } from 'react-icons/io5';
 
 import { FlexContainer } from '@/components/global';

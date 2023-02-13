@@ -1,6 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit';
 
-import React, { FC, ReactNode } from 'react';
+import { FC, ReactNode } from 'react';
 import { Provider } from 'react-redux';
 
 import { userReducer } from '@/slices';

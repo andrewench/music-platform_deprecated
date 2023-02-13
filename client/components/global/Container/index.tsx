@@ -1,6 +1,6 @@
 import cn from 'classnames';
 
-import React, { FC, ReactNode } from 'react';
+import { FC, ReactNode } from 'react';
 
 import {
   ContainerGap,

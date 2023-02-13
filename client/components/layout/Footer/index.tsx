@@ -1,8 +1,6 @@
 import cn from 'classnames';
 import isElectron from 'is-electron';
 
-import React from 'react';
-
 import { FlexContainer } from '@/components/global';
 
 import {

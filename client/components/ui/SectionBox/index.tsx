@@ -1,7 +1,5 @@
 import cn from 'classnames';
 
-import React from 'react';
-
 import { FlexContainer } from '@/components/global';
 
 import { PlaylistItem, SectionTitle } from '@/components/ui';

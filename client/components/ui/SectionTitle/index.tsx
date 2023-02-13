@@ -1,6 +1,6 @@
 import cn from 'classnames';
 
-import React, { FC } from 'react';
+import { FC } from 'react';
 import { IoArrowForward } from 'react-icons/io5';
 import { Link } from 'react-router-dom';
 

@@ -2,9 +2,6 @@
 
 The music platform for listening to music.
 
-#### *Note! This is a pet project. It is not developed for commercial use.*
-<br>
-
 ![Preview of application](/preview/app.png)
 
 ## Install
@@ -13,17 +10,20 @@ The music platform for listening to music.
 # Clone git repository
 git clone https://github.com/andrewench/music-platform
 
-# Go to the directory where the repository was cloned
+# Go to the directory where the repostiry was cloned
 cd music-platform
 
+# Install dependencies for pre-commit
+yarn postinstall
+
 # Install dependencies of the client side of the application
-yarn install
+yarn client:install
 
-# Go to the `server` directory of the application
-cd server
+# Install dependencies of the server side of the application
+yarn server:install
 
-# Install dependencies of the server side of the application and go back
-yarn install & cd -
+# Install dependencies of the desktop launcher of the application
+yarn desktop:install
 ```
 
 ## Run

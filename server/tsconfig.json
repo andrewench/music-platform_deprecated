@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "baseUrl": "./src",
+    "baseUrl": "app",
     "target": "es5",
     "module": "CommonJS",
     "moduleResolution": "node",
@@ -15,16 +15,16 @@
     "alwaysStrict": true,
     "skipLibCheck": true,
     "paths": {
-      "@/routes": ["./routes"],
-      "@/services": ["./services"],
-      "@/types": ["./types"],
-      "@/models": ["./models"],
-      "@/middlewares": ["./middlewares"],
+      "@/routes": ["routes"],
+      "@/services": ["services"],
+      "@/types": ["types"],
+      "@/models": ["models"],
+      "@/middlewares": ["middlewares"],
       "@/shared/types": ["../../shared/types"],
-      "@/*": ["../../*"]
+      "@/": ["../../*"]
     }
   },
-  "include": ["./src/**/*", "webpack.config.ts"],
+  "include": ["./app/**/*", "webpack.config.ts"],
   "ts-node": {
     "compilerOptions": {
       "module": "CommonJS"

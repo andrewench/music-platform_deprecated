@@ -18,10 +18,10 @@ loginRoute
       });
 
       if (user) {
-        res.status(StatusCodes.OK).json(user);
+        return res.status(StatusCodes.OK).json(user);
       }
 
-      res
+      return res
         .status(StatusCodes.NOT_FOUND)
         .json({ error: ReasonPhrases.NOT_FOUND });
     }

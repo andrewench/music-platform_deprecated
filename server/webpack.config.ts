@@ -1,11 +1,11 @@
-import path from 'path';
+import { resolve } from 'path';
 import TSPathsPlugin from 'tsconfig-paths-webpack-plugin';
-import { Configuration } from 'webpack';
+import { Configuration as WebpackConfig } from 'webpack';
 import nodeExternals from 'webpack-node-externals';
 
-const config: Configuration = {
+const config: WebpackConfig = {
   mode: 'development',
-  entry: './src/index.ts',
+  entry: './app/index.ts',
   target: 'node',
   externals: [nodeExternals()],
   module: {
@@ -23,7 +23,7 @@ const config: Configuration = {
   },
   output: {
     filename: 'index.js',
-    path: path.resolve(__dirname, 'build'),
+    path: resolve(__dirname, 'build'),
   },
 };
 

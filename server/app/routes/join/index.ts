@@ -51,7 +51,9 @@ joinRoute
           },
         });
 
-        res.status(StatusCodes.OK).json(tokens);
+        if (user) {
+          return res.status(StatusCodes.OK).json(tokens);
+        }
       }
     }
   );

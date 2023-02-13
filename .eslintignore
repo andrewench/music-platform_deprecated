@@ -1,8 +1,0 @@
-**/node_modules
-.vscode
-.git
-build
-server
-launcher
-*.config.ts
-shared

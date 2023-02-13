@@ -1,6 +1,6 @@
 import type { JestConfigWithTsJest as JestConfig } from 'ts-jest';
 
-const BASE_URL = '<rootDir>/client';
+const BASE_URL = '<rootDir>/app';
 
 const setDir = (dir: string) => `${BASE_URL}/${dir}`;
 

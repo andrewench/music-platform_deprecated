@@ -7,7 +7,7 @@
     "esModuleInterop": true,
     "noImplicitAny": true,
     "sourceMap": true,
-    "baseUrl": "./src",
+    "baseUrl": "app",
     "outDir": "dist",
     "moduleResolution": "node",
     "resolveJsonModule": true,
@@ -15,5 +15,5 @@
       "@config": ["./config"],
     }
   },
-  "include": ["src/**/*"]
+  "include": ["app/**/*"]
 }

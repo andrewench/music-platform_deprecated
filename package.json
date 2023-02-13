@@ -2,86 +2,22 @@
   "name": "music-platform",
   "version": "0.1.0",
   "description": "The music platform for listening to music",
-  "repository": "https://github.com/andrewench/music-platform",
-  "keywords": "react, vite, typescript, scss",
-  "author": "andrewench",
-  "private": true,
-  "type": "module",
   "scripts": {
-    "prepare": "husky install",
-    "client:dev": "vite",
-    "client:build": "tsc && vite build",
-    "client:preview": "vite preview",
-    "client:lint": "eslint ./client --color",
-    "client:lint-fix": "eslint ./client --fix --color",
-    "client:test": "jest",
-    "server:dev": "cd server && yarn run server:dev",
-    "server:lint": "cd server && yarn run server:lint",
-    "db:preview": "cd server && yarn run db:preview"
+    "postinstall": "husky install client/.husky && husky install server/.husky",
+
+    "client:install": "cd client && yarn install",
+    "server:install": "cd server && yarn install",
+    "desktop:install": "cd desktop && yarn install",
+
+    "client:dev": "cd client && yarn dev",
+    "server:dev": "cd server && yarn server:dev",
+    "desktop:dev": "cd desktop && yarn dev"
   },
-  "dependencies": {
-    "@hookform/resolvers": "^2.9.10",
-    "@reduxjs/toolkit": "^1.9.1",
-    "@types/js-cookie": "^3.0.2",
-    "classnames": "^2.3.2",
-    "i18next": "^22.4.6",
-    "is-electron": "^2.2.1",
-    "js-cookie": "^3.0.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-hook-form": "^7.41.1",
-    "react-i18next": "^12.1.1",
-    "react-icons": "^4.7.1",
-    "react-redux": "^8.0.5",
-    "react-router-dom": "^6.6.0",
-    "sass": "^1.57.1",
-    "simplebar-react": "^2.4.3",
-    "vite-tsconfig-paths": "^4.0.3",
-    "yup": "^0.32.11"
-  },
+  "repository": "https://github.com/andrewench/music-platform",
+  "author": "andrewench",
+  "license": "MIT",
+  "private": true,
   "devDependencies": {
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^14.4.3",
-    "@trivago/prettier-plugin-sort-imports": "^4.0.0",
-    "@types/jest": "^29.2.6",
-    "@types/react": "^18.0.26",
-    "@types/react-dom": "^18.0.9",
-    "@typescript-eslint/eslint-plugin": "^5.47.0",
-    "@vitejs/plugin-react": "^3.0.0",
-    "eslint": "^8.30.0",
-    "eslint-config-airbnb": "^19.0.4",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-config-standard-with-typescript": "^24.0.0",
-    "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-jsx-a11y": "^6.6.1",
-    "eslint-plugin-n": "^15.6.0",
-    "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-prettier": "^4.2.1",
-    "eslint-plugin-promise": "^6.1.1",
-    "eslint-plugin-react": "^7.31.11",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "husky": "^8.0.2",
-    "identity-obj-proxy": "^3.0.0",
-    "jest": "^29.3.1",
-    "jest-environment-jsdom": "^29.3.1",
-    "lint-staged": "^13.1.0",
-    "prettier": "^2.8.1",
-    "ts-jest": "^29.0.5",
-    "ts-node": "^10.9.1",
-    "typescript": "^4.9.3",
-    "typescript-plugin-css-modules": "^4.1.1",
-    "vite": "^4.0.0"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*{.ts, .tsx}": [
-      "yarn run client:lint",
-      "git add"
-    ]
+    "husky": "^8.0.3"
   }
 }

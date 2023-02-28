@@ -1,12 +1,12 @@
-{
-  "root": true,
-  "env": {
-    "browser": true,
-    "es2021": true,
-    "node": true,
-    "jest": true
+module.exports = {
+  root: true,
+  env: {
+    browser: true,
+    es2021: true,
+    node: true,
+    jest: true
   },
-  "extends": [
+  extends: [
     "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended",
     "standard-with-typescript",
@@ -14,19 +14,20 @@
     "airbnb/hooks",
     "prettier"
   ],
-  "parserOptions": {
-    "ecmaVersion": "latest",
-    "sourceType": "module",
-    "project": ["./tsconfig.json"]
+  parserOptions: {
+    ecmaVersion: "latest",
+    sourceType: "module",
+    project: "tsconfig.eslint.json",
+    tsconfigRootDir: __dirname
   },
-  "parser": "@typescript-eslint/parser",
-  "plugins": [
+  parser: "@typescript-eslint/parser",
+  plugins: [
     "react",
     "@typescript-eslint",
     "prettier"
   ],
-  "rules": {
-    "semi": "off",
+  rules: {
+    semi: "off",
     "no-extra-semi": "off",
     "jsx-quotes": "off",
     "comma-dangle": "off",
@@ -38,7 +39,7 @@
     "no-param-reassign": ["error", { "props": false }],
     "import/prefer-default-export": "off",
     "import/no-unresolved": ["error", {
-        "ignore": ["^@"]
+        ignore: ["^@"]
       }
     ],
     "import/extensions": ["off", "ignorePackages", {
@@ -49,7 +50,7 @@
       }
     ],
     "import/no-extraneous-dependencies": ["error", {
-        "devDependencies": true
+        devDependencies: true
       }
     ],
 
@@ -63,8 +64,8 @@
     "react/prop-types": "off",
     "react/no-unused-prop-types": "warn",
     "react/function-component-definition": ["error", {
-        "namedComponents": "arrow-function",
-        "unnamedComponents": "arrow-function"
+        namedComponents: "arrow-function",
+        unnamedComponents: "arrow-function"
       }
     ],
 
@@ -77,24 +78,24 @@
     "@typescript-eslint/consistent-type-definitions": "off",
     "@typescript-eslint/no-extraneous-class": "off",
     "@typescript-eslint/no-misused-promises": ["error", {
-        "checksVoidReturn": false
+        checksVoidReturn: false
       }
     ],
     "@typescript-eslint/triple-slash-reference": ["warn", {
-      "lib": "always",
-      "path": "always",
-      "types": "always"
+      lib: "always",
+      path: "always",
+      types: "always"
       }
     ],
     "@typescript-eslint/consistent-type-assertions": ["warn", {
-      "assertionStyle": "as",
-      "objectLiteralTypeAssertions": "allow"
+      assertionStyle: "as",
+      objectLiteralTypeAssertions: "allow"
     }]
   },
-  "settings": {
+  settings: {
     "import/resolver": {
-      "node": {
-        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      node: {
+        extensions: [".js", ".jsx", ".ts", ".tsx"]
       }
     },
     "import/extensions": [".js", ".jsx", ".ts", ".tsx"]

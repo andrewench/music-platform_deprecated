@@ -11,8 +11,8 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "lint": "eslint ./app --color",
-    "lint-fix": "eslint ./app --fix --color",
+    "lint": "eslint ./app -c .eslintrc.cjs",
+    "lint-fix": "eslint ./app -c .eslintrc.cjs --fix",
     "test": "jest"
   },
   "dependencies": {
